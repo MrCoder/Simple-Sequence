@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="b0121167-156e-49c8-b314-9887442a7ca6" name="Default" comment="" />
+    <list default="true" readonly="true" id="b0121167-156e-49c8-b314-9887442a7ca6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -117,7 +119,7 @@
       <file leaf-file-name="canvas_manager.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="50" selection-start="4998" selection-end="4998" vertical-scroll-proportion="-1.2">
+            <state line="161" column="50" selection-start="4998" selection-end="4998" vertical-scroll-proportion="5.366667">
               <folding />
             </state>
           </provider>
@@ -755,7 +757,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="50" selection-start="4998" selection-end="4998" vertical-scroll-proportion="-1.2">
+        <state line="161" column="50" selection-start="4998" selection-end="4998" vertical-scroll-proportion="5.366667">
           <folding />
         </state>
       </provider>
