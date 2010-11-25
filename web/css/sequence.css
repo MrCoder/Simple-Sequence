@@ -1,0 +1,111 @@
+.entity_box {
+    color: #7f8386;
+}
+
+.line {
+    color: black;
+}
+
+.messge {
+    color: black;
+}
+
+.bar {
+    border-color: #39393b;
+    background-color: #b0b1b4;
+}
+
+.scroll {
+    float: left;
+    position: relative;
+    width: 98%;
+    height: 800px;
+    overflow: auto;
+    border: 1px solid #666;
+    background-color: #FFF;
+    padding: 8px;
+}
+
+.canvas {
+    position: absolute;
+    border: 1px dotted;
+    width:2048px;
+    height:768px;
+}
+
+
+#floating_container {
+    position: fixed;
+    bottom:0;
+    width:500px;
+    right:20px;
+    cursor:pointer;
+
+    background-color: #666666;
+    z-index: 11100
+}
+
+
+.collapse #floating_container{
+    height:20px;
+}
+
+.expand #floating_container{
+    height:600px;
+}
+
+
+#script_title {
+    float: left;
+    width:100%;
+    color: rgb(255, 255, 255);
+    font-family: arial, sans-serif;
+    margin-left:5px;
+}
+
+
+#collapse_button {
+	position: absolute;
+    top:0;
+	left: 480px;
+	width: 20px;
+	height: 22px;
+	cursor: pointer;
+}
+
+
+.collapse #collapse_button{
+    background: url(../resource/google_icons.png) no-repeat 0px -78px transparent;
+}
+
+.expand #collapse_button{
+    background: url(../resource/google_icons.png) no-repeat -18px -78px transparent;
+}
+
+#script_container{
+    margin-top:20px;
+    width:500px;
+}
+
+.collapse #script_container{
+    height:0;
+    visibility:hidden;
+}
+
+.expand #script_container{
+    height:578px;
+}
+
+#script_content {
+    font-family: monospace;
+    font-size:10pt;
+    width:498px;
+}
+
+.collapse #script_content{
+    height:0;
+}
+
+.expand #script_content{
+    height:100%;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Simple Sequence</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css">
+    <link rel="stylesheet" href="./css/sequence.css">
+
+    <script src="./js/jquery.js" type="text/javascript"></script>
+    <script src="./js/jquery.ui.min.js" type="text/javascript"></script>
+    <script src="js/drawers/lifeline.js" type="text/javascript"></script>
+    <script src="js/drawers/rect.js" type="text/javascript"></script>
+    <script src="js/drawers/grid.js" type="text/javascript"></script>
+    <script src="js/drawers/label.js" type="text/javascript"></script>
+    <script src="js/drawers/arrow_icon_right.js" type="text/javascript"></script>
+    <script src="js/drawers/arrow_icon_left.js" type="text/javascript"></script>
+    <script src="js/drawers/line.js" type="text/javascript"></script>
+    <script src="js/drawers/label.js" type="text/javascript"></script>
+    <script src="js/drawers/horizontal_line.js" type="text/javascript"></script>
+    <script src="js/drawers/horizontal_arrow.js" type="text/javascript"></script>
+    <script src="js/drawers/bar.js" type="text/javascript"></script>
+    <script src="js/drawers/entity.js" type="text/javascript"></script>
+    <script src="js/drawers/message.js" type="text/javascript"></script>
+    <script src="js/drawers/internal_invoke.js" type="text/javascript"></script>
+    <script src="js/domain/entities.js" type="text/javascript"></script>
+    <script src="js/domain/message.js" type="text/javascript"></script>
+    <script src="js/domain/activity_sequence.js" type="text/javascript"></script>
+    <script src="./js/presentation/canvas_manager.js" type="text/javascript"></script>
+    <script src="./js/parser/message_parser.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        jQuery(window).load(function() {
+            if (jQuery.browser.safari && document.readyState != 'complete') {
+                // chrome / safari will trigger load function before images are finished
+                // check readystate in safari browser to ensure images are done loading
+                setTimeout(arguments.callee, 100);
+                return;
+            }
+            // do things you want to do
+            window.canvasManager = new CanvasManager($('#canvasContainer'));
+            window.activitySequence = new ActivitySequence("");
+
+            window.redraw();
+        });
+
+
+        function collapse() {
+            if ($("#floating_container").hasClass("collapse")) {
+                $("#floating_container").removeClass("collapse");
+                $("#floating_container").addClass("expand");
+            } else {
+                $("#floating_container").removeClass("expand");
+                $("#floating_container").addClass("collapse");
+            }
+        }
+
+
+        window.redraw = function () {
+            var scriptContent = $("#script_content")[0].value;
+            window.activitySequence.draw(window.canvasManager, scriptContent);
+        }
+
+
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1211588-8']);
+        _gaq.push(['_setDomainName', '.appspot.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+<div id="canvasContainer" class="scroll" style="position: relative;"></div>
+
+<div id="floating_container" class="expand">
+    <div id="script_title" onclick="collapse()">
+        <span>Pseudo Code:</span><span>[Feedback to: eagle.xiao#gmail.com]</span><span id="performance"></span> </div>
+    <div style="float: right;">
+            <span id="collapse_button" onclick="collapse()">
+            </span>
+    </div>
+    <div id="script_container">
+        <textarea id="script_content"
+                  title="Script Content"
+                  onblur="window.redraw()"></textarea>
+        <script type="text/javascript">
+            var supported = 'document.ready{\ncanvasManager.new()\n}';
+            var p = document.querySelector('#script_content');
+            if (localStorage.script == null) {
+                localStorage.script = p.value = supported;
+            } else {
+                p.value = localStorage.script;
+            }
+            p.addEventListener('keyup', function() {
+                localStorage.script = p.value;
+            }, false);
+
+        </script>
+
+    </div>
+
+</div>
+
+
+<span id=entity_background style=display:none>
+    <img id="entity_tl" src="resource/tl.gif"/>
+    <img id="entity_tr" src="resource/tr.gif"/>
+    <img id="entity_bl" src="resource/bl.gif"/>
+    <img id="entity_br" src="resource/br.gif"/>
+    <img id="entity_in" src="resource/in.png"/>
+ </span>
+<span id="for_css_util" style="display:none">
+    <span id=entity_box class="entity_box"></span>
+    <span id=line class="line"></span>
+    <span id=bar class="bar"></span>
+    <span id=message class="message"></span>
+    <span id=canvas class="canvas"></span>
+</span>
+
+<span id="small_arrow_icon" style="display:none">
+    <img id="arrow_left" src="resource/arrow_left.gif">
+    <img id="arrow_right" src="resource/arrow_right.gif">
+</span>
+</body>
+</html>
