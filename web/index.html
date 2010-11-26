@@ -86,7 +86,7 @@
 
 <div id="floating_container" class="expand">
     <div id="script_title" onclick="collapse()">
-        <span>Pseudo Code:</span><span>[Feedback to: eagle.xiao#gmail.com]</span><span id="performance"></span> </div>
+        <span>Pseudo Code:</span><span>[Click on the canvas to draw the sequence.]</span> </div>
     <div style="float: right;">
             <span id="collapse_button" onclick="collapse()">
             </span>
@@ -96,7 +96,8 @@
                   title="Script Content"
                   onblur="window.redraw()"></textarea>
         <script type="text/javascript">
-            var supported = 'document.ready{\ncanvasManager.new()\n}';
+//            var supported = 'document.ready{\ncanvasManager.new()\n}';
+            var supported = 'document.ready{\n  canvasManager.new(){\n    a = invokeMethod();\n    a.invokeMethod();\n  }\n}';
             var p = document.querySelector('#script_content');
             if (localStorage.script == null) {
                 localStorage.script = p.value = supported;

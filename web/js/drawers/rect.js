@@ -4,6 +4,7 @@ function RectangleDrawer(context) {
         var radius = 5;
 
         context.beginPath();
+        context.bez
         context.moveTo(left+radius, top);
         context.lineTo(left+width-radius, top);
         context.quadraticCurveTo(left+width, top, left+width, top+radius);

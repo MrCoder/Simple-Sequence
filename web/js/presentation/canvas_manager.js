@@ -56,7 +56,7 @@ function CanvasManager(container) {
     this.messages = new Array();
     this.entities = new Array();
     this.bars = new Array();
-    this.lastMessageTop = 60;                        
+    this.lastMessageTop = 60;
     this.messageSpace = 25;
     this.defaultBarHeight = 20;
     this.canvases = new Array();
@@ -64,12 +64,10 @@ function CanvasManager(container) {
     function createCanvas(canvasId, zIndex) {
 
 
-
-
         var canvas = $('#' + canvasId);
         if (canvas.length > 0) return canvas[0];
 
-        var canvasEle = $('<canvas/>', {id:canvasId, class:'canvas'});
+        var canvasEle = $("<canvas id='" + canvasId + "' class='canvas'></canvas>");
 
         container.append(canvasEle);
         canvasEle[0].width = canvasEle[0].clientWidth;
