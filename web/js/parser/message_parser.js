@@ -9,6 +9,10 @@ function MessageParser() {
         return (this.substr(0, pattern.length) == pattern);
     };
 
+    String.prototype.endsWith = function(pattern) {
+        return (this.substr(this.length - pattern.length, pattern.length) == pattern);
+    };
+
     this.parse = function (scriptContent) {
         scriptContent = scriptContent.split("{").join("\n{\n");
         scriptContent = scriptContent.split("}").join("\n}\n");
@@ -51,6 +55,10 @@ function MessageParser() {
         var returnResult = RegExp.$4
         var entityTo = RegExp.$6
         var message = RegExp.$7
+
+        if (message.endsWith(';')){
+            message = message.substr(0, message.length - 1);
+        }
 
         if (entityTo == "") entityTo = entityFrom;
 

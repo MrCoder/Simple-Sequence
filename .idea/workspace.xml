@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b0121167-156e-49c8-b314-9887442a7ca6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/parser/message_parser.js" afterPath="$PROJECT_DIR$/web/js/parser/message_parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/domain/activity_sequence.js" afterPath="$PROJECT_DIR$/web/js/domain/activity_sequence.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/presentation_bar.js" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_bar.js" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -66,10 +64,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="30" selection-start="8640" selection-end="8640" vertical-scroll-proportion="0.5825243">
+            <state line="173" column="53" selection-start="8748" selection-end="8748" vertical-scroll-proportion="-11.086957">
               <folding />
             </state>
           </provider>
@@ -147,10 +145,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message_parser.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="message_parser.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/parser/message_parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="29" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+            <state line="59" column="22" selection-start="2272" selection-end="2272" vertical-scroll-proportion="0.73333335">
               <folding />
             </state>
           </provider>
@@ -846,16 +844,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/parser/message_parser.js">
+    <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+        <state line="173" column="53" selection-start="8748" selection-end="8748" vertical-scroll-proportion="-11.086957">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
+    <entry file="file://$PROJECT_DIR$/web/js/parser/message_parser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="30" selection-start="8640" selection-end="8640" vertical-scroll-proportion="0.5825243">
+        <state line="59" column="22" selection-start="2272" selection-end="2272" vertical-scroll-proportion="0.73333335">
           <folding />
         </state>
       </provider>
