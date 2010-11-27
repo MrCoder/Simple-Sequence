@@ -118,22 +118,31 @@
             var scriptContent = $("#script_content")[0].value;
             var t0 = new Date().getTime();
             window.activitySequence.draw(window.canvasManager, scriptContent);
+            window.lastXOffset = 0;
             var t1 = new Date().getTime();
             //            $('#perf').text(t1 - t0);
         };
 
         function startMove(event) {
-//            alert(event.screenX + " left " + event.screenY + " down")
+            //            alert(event.screenX + " left " + event.screenY + " down")
             $('#canvasContainer')[0].onmousemove = dragCanvas;
+            window.orignalX = event.screenX;
         }
 
-        function dragCanvas(event){
-            $('#perf').text(event.screenX + " left " + event.screenY + " down");
+        function dragCanvas(event) {
+            //            $('#canvasContainer').offset(event.screenX - window.orignalX);
+            $('#perf').text(window.orignalX - event.screenX + " left " + event.screenY + " down");
+            var offset = event.screenX - window.orignalX;
+
+            var totalOffset = window.lastXOffset + offset;
+            if (totalOffset < 0)
+                $('#canvasContainer').offset({ top: 10, left: totalOffset });
         }
 
         function endMove(event) {
             $('#canvasContainer')[0].onmousemove = null;
-//            alert(event.screenX + " left " + event.screenY + " down")
+            window.lastXOffset = window.lastXOffset + event.screenX - window.orignalX;
+            //            alert(event.screenX + " left " + event.screenY + " down")
         }
 
     </script>

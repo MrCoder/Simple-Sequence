@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b0121167-156e-49c8-b314-9887442a7ca6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/sequence.css" afterPath="$PROJECT_DIR$/web/css/sequence.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
     </list>
@@ -67,7 +66,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="71" selection-start="6224" selection-end="6224" vertical-scroll-proportion="0.32991204">
+            <state line="137" column="31" selection-start="6766" selection-end="6766" vertical-scroll-proportion="0.813783">
               <folding />
             </state>
           </provider>
@@ -900,7 +899,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="71" selection-start="6224" selection-end="6224" vertical-scroll-proportion="0.32991204">
+        <state line="137" column="31" selection-start="6766" selection-end="6766" vertical-scroll-proportion="0.813783">
           <folding />
         </state>
       </provider>
