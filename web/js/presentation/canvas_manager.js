@@ -1,9 +1,10 @@
-function RichBar(id, entityName, left, top, height) {
+function RichBar(id, entityName, left, top, height, messageId) {
     this.id = id;
     this.entityName = entityName;
     this.left = left;
     this.height = height;
     this.top = top;
+    this.messageId = messageId;
 
     this.extend = function(bottom) {
         var canvas = $('#bar_canvas_' + this.id)[0];
@@ -116,12 +117,12 @@ function CanvasManager(container) {
         }
     };
 
-    this.createABar = function (start, barEntityName, top) {
+    this.createABar = function (start, barEntityName, top, messageId) {
         var barId = this.bars.length;
         var barCanvasId = 'bar_canvas_' + barId;
         var barContext = createCanvas(barCanvasId, 3000).getContext('2d');
         this.barDrawer.draw(barContext, start, top, this.defaultBarHeight);
-        var richBar = new RichBar(barId, barEntityName, start, top, this.defaultBarHeight);
+        var richBar = new RichBar(barId, barEntityName, start, top, this.defaultBarHeight, messageId);
         this.bars.push(richBar);
         return richBar;
     };
@@ -146,9 +147,9 @@ function CanvasManager(container) {
 
         if (message.from != message.to) {
             var top = this.lastMessageTop;
-            var fromBar = this.createABar(richMessage.start, message.from, top);
+            var fromBar = this.createABar(richMessage.start, message.from, top, -1);
 
-            var toBar = this.createABar(richMessage.end, message.to, this.lastMessageTop);
+            var toBar = this.createABar(richMessage.end, message.to, this.lastMessageTop, message.id);
             toBar.parentBar = fromBar;
             fromBar.extend(toBar.top + toBar.height);
         }
@@ -156,7 +157,7 @@ function CanvasManager(container) {
         if (message.subMessages.length > 0) {
             for (var i in message.subMessages) {
                 var subMessage = message.subMessages[i];
-                this.addSubMessage(subMessage);
+                this.addSubMessage(message, subMessage);
             }
         }
 
@@ -172,23 +173,26 @@ function CanvasManager(container) {
         return result;
     };
 
-    this.addSubMessage = function(message) {
+    this.getBarByMessageId = function(messageId){
+        for (var i in this.bars) {
+            var bar = this.bars[i];
+            if (bar.messageId == messageId) return bar;
+        }
+    };
+
+    this.addSubMessage = function(parentMessage, message) {
         var richMessage = this.drawMessage(message);
         var end = richMessage.end;
-//        if (message.from != message.to) {
-            var fromBar = this.getBar(message.from);
+//        var fromBar = this.getBar(message.from);
+        var fromBar = this.getBarByMessageId(parentMessage.id);
 
-            var toBar = this.createABar(end, message.to, this.lastMessageTop);
-            toBar.parentBar = fromBar;
-            fromBar.extend(toBar.top + toBar.height);
-//        } else{
-//            var fromBar = this.getBar(message.from);
-//            fromBar.extend(fromBar.top + fromBar.height + this.defaultBarHeight)
-//        }
+        var toBar = this.createABar(end, message.to, this.lastMessageTop, message.id);
+        toBar.parentBar = fromBar;
+        fromBar.extend(toBar.top + toBar.height);
         if (message.subMessages.length > 0) {
             for (var i in message.subMessages) {
                 var subMessage = message.subMessages[i];
-                this.addSubMessage(subMessage);
+                this.addSubMessage(message, subMessage);
             }
         }
     };

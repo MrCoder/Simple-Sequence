@@ -1,4 +1,5 @@
 function MessageParser() {
+    this.messageIdGenerator = 0;
     this.expressions = null;
     this.rootMessages = new Array();
     this.currentMessage = null;
@@ -18,8 +19,8 @@ function MessageParser() {
             } else if (expression.trim() == "}") {
                 this.messageStack.pop();
             } else {
-                var message = getMessageFromSentence(expression);
-                if (this.messageStack.length <= 0){
+                var message = getMessageFromSentence(this.messageIdGenerator ++, expression);
+                if (this.messageStack.length <= 0) {
                     message.from = "CLIENT";
                     this.rootMessages.push(message);
                 } else {
@@ -34,25 +35,24 @@ function MessageParser() {
     };
 
 
+    function getMessageFromSentence(id, sentence) {
+        if (sentence.trim() == "") return null;
 
-        function getMessageFromSentence(sentence) {
-            if (sentence.trim() == "") return null;
+        sentence = sentence.split(" ").join("");
+        /((\w+):)*((\w+)=)*((\w+)\.)*(.+)/.test(sentence);
 
-            sentence = sentence.split(" ").join("");
-            /((\w+):)*((\w+)=)*((\w+)\.)*(.+)/.test(sentence);
+        var entityFrom = RegExp.$2
+        var returnResult = RegExp.$4
+        var entityTo = RegExp.$6
+        var message = RegExp.$7
 
-            var entityFrom = RegExp.$2
-            var returnResult = RegExp.$4
-            var entityTo = RegExp.$6
-            var message = RegExp.$7
+        if (entityTo == "") entityTo = entityFrom;
 
-            if (entityTo == "") entityTo = entityFrom;
-
-            var text = "";
-            if (returnResult != "")
-                text = "[" + returnResult + "]" + message;
-            else
-                text = message;
-            return new SyncMessage(entityFrom, entityTo, text);
-        }
+        var text = "";
+        if (returnResult != "")
+            text = "[" + returnResult + "]" + message;
+        else
+            text = message;
+        return new SyncMessage(id, entityFrom, entityTo, text);
     }
+}

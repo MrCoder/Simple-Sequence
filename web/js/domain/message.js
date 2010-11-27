@@ -1,4 +1,5 @@
-function SyncMessage(from, to, text) {
+function SyncMessage(id, from, to, text) {
+    this.id = id;
     this.from = from;
     this.to = to;
     this.message = text;
