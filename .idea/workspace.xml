@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b0121167-156e-49c8-b314-9887442a7ca6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/parser/message_parser.js" afterPath="$PROJECT_DIR$/web/js/parser/message_parser.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" afterPath="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_entity.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/label.js" afterPath="$PROJECT_DIR$/web/js/drawers/label.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_bar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/presentation_bar.js" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_bar.js" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -71,7 +71,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="51" selection-start="2062" selection-end="2062" vertical-scroll-proportion="-19.565218">
+            <state line="30" column="51" selection-start="2062" selection-end="2062" vertical-scroll-proportion="28.695652">
               <folding />
             </state>
           </provider>
@@ -80,16 +80,25 @@
       <file leaf-file-name="internal_invoke.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/drawers/internal_invoke.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="48" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
+            <state line="16" column="34" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canvas_manager.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="label.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/drawers/label.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="43" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="canvas_manager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.787234">
+            <state line="104" column="35" selection-start="3667" selection-end="3667" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,7 +107,7 @@
       <file leaf-file-name="presentation_message.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_message.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+            <state line="4" column="19" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,19 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="presentation_bar.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="presentation_bar.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_bar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/domain/message.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="17" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+            <state line="22" column="63" selection-start="882" selection-end="882" vertical-scroll-proportion="0.4680851">
               <folding />
             </state>
           </provider>
@@ -143,7 +143,7 @@
       <file leaf-file-name="message_parser.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/parser/message_parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="81" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
+            <state line="24" column="67" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,7 +173,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/web/js/domain/activity_sequence.js" />
-        <option value="$PROJECT_DIR$/web/js/drawers/label.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/entity.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/horizontal_line.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/rect.js" />
@@ -181,13 +180,14 @@
         <option value="$PROJECT_DIR$/web/js/drawers/bar.js" />
         <option value="$PROJECT_DIR$/web/css/sequence.css" />
         <option value="$PROJECT_DIR$/web/js/domain/message.js" />
-        <option value="$PROJECT_DIR$/web/js/parser/message_parser.js" />
-        <option value="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
-        <option value="$PROJECT_DIR$/web/js/presentation/presentation_bar.js" />
         <option value="$PROJECT_DIR$/web/js/presentation/presentation_entity.js" />
         <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/web/js/parser/message_parser.js" />
         <option value="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
+        <option value="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
+        <option value="$PROJECT_DIR$/web/js/drawers/label.js" />
         <option value="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" />
+        <option value="$PROJECT_DIR$/web/js/presentation/presentation_bar.js" />
       </list>
     </option>
   </component>
@@ -764,13 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/label.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/drawers/horizontal_arrow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="26" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
@@ -806,30 +799,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/internal_invoke.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="48" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/parser/message_parser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="81" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/drawers/message.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="27" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_bar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -841,23 +813,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
+    <entry file="file://$PROJECT_DIR$/web/js/parser/message_parser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="51" selection-start="2062" selection-end="2062" vertical-scroll-proportion="-19.565218">
+        <state line="24" column="67" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_message.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+        <state line="4" column="19" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="51" selection-start="2062" selection-end="2062" vertical-scroll-proportion="28.695652">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/internal_invoke.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="34" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/label.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="43" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.787234">
+        <state line="104" column="35" selection-start="3667" selection-end="3667" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="63" selection-start="882" selection-end="882" vertical-scroll-proportion="0.4680851">
           <folding />
         </state>
       </provider>

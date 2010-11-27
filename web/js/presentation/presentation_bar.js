@@ -13,7 +13,18 @@ function PresentationBar(id, left, top, height, messageId) {
         if (newHeight > this.height)
             this.height = newHeight;
         new BarDrawer().draw(barContext, this.left, this.top, this.height);
-        if (this.parentBar) this.parentBar.extend(this.top + this.height + 2);
+        if (this.parentBar) this.parentBar.extend(this.top + this.height+ 10);
+    };
+
+    this.extendByToBar = function(toBar){
+        var canvas = $('#bar_canvas_' + this.id)[0];
+        canvas.width = canvas.width;
+        var barContext = canvas.getContext('2d');
+        var newHeight = toBar.top + toBar.height - this.top + 3;
+        if (newHeight > this.height)
+            this.height = newHeight;
+        new BarDrawer().draw(barContext, this.left, this.top, this.height);
+        if (this.parentBar) this.parentBar.extendByToBar(this);
     };
 
     this.clear = function() {

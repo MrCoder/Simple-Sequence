@@ -8,6 +8,7 @@ function LabelDrawer(context){
 
         context.fillStyle="black";
         var newLeft = left + length / 2 - textMetrics.width / 2;
+        if (newLeft < left) newLeft = left;
         context.fillText(message, newLeft, top - 3, 300);
     }
 }

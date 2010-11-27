@@ -22,6 +22,7 @@ function MessageParser() {
                 var message = getMessageFromSentence(this.messageIdGenerator ++, expression);
                 if (this.messageStack.length <= 0) {
                     message.from = "CLIENT";
+                    if (message.to == "") message.to = message.from;
                     this.rootMessages.push(message);
                 } else {
                     message.from = this.messageStack[this.messageStack.length - 1].to;

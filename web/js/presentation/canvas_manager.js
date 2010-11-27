@@ -10,7 +10,7 @@ function CanvasManager(container) {
     this.entities = new Array();
     this.bars = new Array();
     this.lastMessageTop = 60;
-    this.messageSpace = 25;
+    this.messageSpace = 30;
     this.defaultBarHeight = 20;
     this.canvases = new Array();
 
@@ -97,14 +97,12 @@ function CanvasManager(container) {
     this.addMessage = function(message) {
         var richMessage = this.drawMessage(message);
 
-        if (message.from != message.to) {
-            var top = this.lastMessageTop;
-            var fromBar = this.createABar(richMessage.start, message.from, top, -1);
+        var top = this.lastMessageTop;
+        var fromBar = this.createABar(richMessage.start, message.from, richMessage.top, -1);
 
-            var toBar = this.createABar(richMessage.end, message.to, this.lastMessageTop, message.id);
-            toBar.parentBar = fromBar;
-            fromBar.extend(toBar.top + toBar.height);
-        }
+        var toBar = this.createABar(richMessage.end, message.to, this.lastMessageTop, message.id);
+        toBar.parentBar = fromBar;
+        fromBar.extendByToBar(toBar);
 
         if (message.subMessages.length > 0) {
             for (var i in message.subMessages) {
@@ -116,7 +114,7 @@ function CanvasManager(container) {
     };
 
 
-    this.getBarByMessageId = function(messageId){
+    this.getBarByMessageId = function(messageId) {
         for (var i in this.bars) {
             var bar = this.bars[i];
             if (bar.messageId == messageId) return bar;
@@ -126,12 +124,12 @@ function CanvasManager(container) {
     this.addSubMessage = function(parentMessage, message) {
         var richMessage = this.drawMessage(message);
         var end = richMessage.end;
-//        var fromBar = this.getBar(message.from);
         var fromBar = this.getBarByMessageId(parentMessage.id);
 
         var toBar = this.createABar(end, message.to, this.lastMessageTop, message.id);
         toBar.parentBar = fromBar;
-        fromBar.extend(toBar.top + toBar.height);
+//        fromBar.extend(toBar.top + toBar.height+1);
+        fromBar.extendByToBar(toBar);
         if (message.subMessages.length > 0) {
             for (var i in message.subMessages) {
                 var subMessage = message.subMessages[i];
@@ -151,9 +149,9 @@ function CanvasManager(container) {
             var left = entityFrom.left + entityFrom.width / 2;
             new InternalInvokeDrawer()
                     .draw(messageContext, message.message, left, this.lastMessageTop);
-            this.lastMessageTop += this.messageSpace;
             var id = this.messages.length;
-            var richMessage = new PresentationMessage(id, left, left);
+            var richMessage = new PresentationMessage(id, left, left, this.lastMessageTop);
+            this.lastMessageTop += this.messageSpace - 5;
             this.messages.push(richMessage);
             return richMessage;
         }
@@ -164,7 +162,7 @@ function CanvasManager(container) {
         this.lastMessageTop = this.lastMessageTop + this.messageSpace;
         this.messageDrawer.draw(messageContext, message.message, start, this.lastMessageTop, length);
 
-        var richMessage = new PresentationMessage(this.messages.length, start, end);
+        var richMessage = new PresentationMessage(this.messages.length, start, end, this.lastMessageTop);
         this.messages.push(richMessage);
         return richMessage;
     };
