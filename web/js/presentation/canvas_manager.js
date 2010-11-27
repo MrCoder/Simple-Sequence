@@ -80,10 +80,9 @@ function CanvasManager(container) {
     };
 
     this.removeAllMessages = function() {
-        for (var i in this.messages) {
-            var message = this.messages[i];
-            message.clear();
-        }
+        var canvas = $('#message_canvas_')[0];
+        if (canvas) canvas.width = canvas.width;
+
 
         for (var i in this.bars) {
             var bar = this.bars[i];
@@ -128,7 +127,7 @@ function CanvasManager(container) {
 
         var toBar = this.createABar(end, message.to, this.lastMessageTop, message.id);
         toBar.parentBar = fromBar;
-//        fromBar.extend(toBar.top + toBar.height+1);
+        //        fromBar.extend(toBar.top + toBar.height+1);
         fromBar.extendByToBar(toBar);
         if (message.subMessages.length > 0) {
             for (var i in message.subMessages) {
@@ -141,7 +140,8 @@ function CanvasManager(container) {
     this.drawMessage = function (message) {
         var entityFrom = this.getEntity(message.from);
         var entityTo = this.getEntity(message.to);
-        var messageCanvasId = 'message_canvas_' + this.messages.length;
+        //        var messageCanvasId = 'message_canvas_' + this.messages.length;
+        var messageCanvasId = 'message_canvas_';
         var messageContext = createCanvas(messageCanvasId, 5000).getContext('2d');
 
         if (message.from == message.to) {

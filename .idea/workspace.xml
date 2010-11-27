@@ -8,7 +8,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/label.js" afterPath="$PROJECT_DIR$/web/js/drawers/label.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/presentation_bar.js" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_bar.js" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -95,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canvas_manager.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="canvas_manager.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="35" selection-start="3667" selection-end="3667" vertical-scroll-proportion="0.0">
+            <state line="83" column="20" selection-start="3001" selection-end="3001" vertical-scroll-proportion="1.0425532">
               <folding />
             </state>
           </provider>
@@ -122,10 +121,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="presentation_bar.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="presentation_bar.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_bar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="63" selection-start="882" selection-end="882" vertical-scroll-proportion="0.4680851">
+            <state line="22" column="63" selection-start="882" selection-end="882" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -183,11 +182,11 @@
         <option value="$PROJECT_DIR$/web/js/presentation/presentation_entity.js" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/js/parser/message_parser.js" />
-        <option value="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/label.js" />
-        <option value="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" />
         <option value="$PROJECT_DIR$/web/js/presentation/presentation_bar.js" />
+        <option value="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
+        <option value="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" />
       </list>
     </option>
   </component>
@@ -820,13 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_message.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="51" selection-start="2062" selection-end="2062" vertical-scroll-proportion="28.695652">
@@ -848,16 +840,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
+    <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_bar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="35" selection-start="3667" selection-end="3667" vertical-scroll-proportion="0.0">
+        <state line="22" column="63" selection-start="882" selection-end="882" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_bar.js">
+    <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_message.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="63" selection-start="882" selection-end="882" vertical-scroll-proportion="0.4680851">
+        <state line="4" column="19" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="20" selection-start="3001" selection-end="3001" vertical-scroll-proportion="1.0425532">
           <folding />
         </state>
       </provider>
