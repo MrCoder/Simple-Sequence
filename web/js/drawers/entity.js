@@ -1,6 +1,7 @@
 function EntityDrawer(){
     this.draw = function(context, entityName, left, top, selected){
-        context.font = "bold 14px arial, sans-serif";
+//        context.font = "bold 14px arial, sans-serif";
+        context.font = "bold 14px chalk board";
 
         var textMetrics = context.measureText(entityName);
         var rectangleWidth = textMetrics.width + 20;
