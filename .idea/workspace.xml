@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b0121167-156e-49c8-b314-9887442a7ca6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" afterPath="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" afterPath="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/domain/activity_sequence.js" afterPath="$PROJECT_DIR$/web/js/domain/activity_sequence.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/sequence.css" afterPath="$PROJECT_DIR$/web/css/sequence.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -70,7 +67,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="177" column="8" selection-start="8330" selection-end="8330" vertical-scroll-proportion="-11.64">
+            <state line="123" column="28" selection-start="6149" selection-end="6149" vertical-scroll-proportion="-12.92">
               <folding />
             </state>
           </provider>
@@ -85,19 +82,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sequence.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sequence.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/css/sequence.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="33" selection-start="1472" selection-end="1472" vertical-scroll-proportion="-24.423077">
+            <state line="28" column="16" selection-start="407" selection-end="407" vertical-scroll-proportion="0.45949927">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canvas_manager.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="canvas_manager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="37" selection-start="2884" selection-end="2884" vertical-scroll-proportion="0.6833579">
+            <state line="85" column="37" selection-start="2884" selection-end="2884" vertical-scroll-proportion="-17.846153">
               <folding />
             </state>
           </provider>
@@ -181,12 +178,12 @@
         <option value="$PROJECT_DIR$/web/js/presentation/presentation_entity.js" />
         <option value="$PROJECT_DIR$/web/js/presentation/presentation_bar.js" />
         <option value="$PROJECT_DIR$/web/js/parser/message_parser.js" />
-        <option value="$PROJECT_DIR$/web/css/sequence.css" />
         <option value="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
-        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/js/domain/activity_sequence.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
         <option value="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" />
+        <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/web/css/sequence.css" />
       </list>
     </option>
   </component>
@@ -873,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="8" selection-start="8330" selection-end="8330" vertical-scroll-proportion="-11.64">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/domain/activity_sequence.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="35" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0">
@@ -894,16 +884,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/sequence.css">
+    <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="33" selection-start="1472" selection-end="1472" vertical-scroll-proportion="-24.423077">
+        <state line="85" column="37" selection-start="2884" selection-end="2884" vertical-scroll-proportion="-17.846153">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
+    <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="37" selection-start="2884" selection-end="2884" vertical-scroll-proportion="0.6833579">
+        <state line="123" column="28" selection-start="6149" selection-end="6149" vertical-scroll-proportion="-12.92">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/sequence.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="16" selection-start="407" selection-end="407" vertical-scroll-proportion="0.45949927">
           <folding />
         </state>
       </provider>
