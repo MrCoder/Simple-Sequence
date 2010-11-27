@@ -120,8 +120,21 @@
             window.activitySequence.draw(window.canvasManager, scriptContent);
             var t1 = new Date().getTime();
             //            $('#perf').text(t1 - t0);
+        };
+
+        function startMove(event) {
+//            alert(event.screenX + " left " + event.screenY + " down")
+            $('#canvasContainer')[0].onmousemove = dragCanvas;
         }
 
+        function dragCanvas(event){
+            $('#perf').text(event.screenX + " left " + event.screenY + " down");
+        }
+
+        function endMove(event) {
+            $('#canvasContainer')[0].onmousemove = null;
+//            alert(event.screenX + " left " + event.screenY + " down")
+        }
 
     </script>
     <script type="text/javascript">
@@ -143,20 +156,25 @@
     </script>
 </head>
 <body>
-<div id="canvasContainer" class="scroll" style="position: relative;">
-    <canvas id="entity_canvas_" width=2048px height=768px class="canvas" style="z-index:1000"></canvas>
-    <canvas id="message_canvas_" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-    <canvas id="bar_canvas_0" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-    <canvas id="bar_canvas_1" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-    <canvas id="bar_canvas_2" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-    <canvas id="bar_canvas_3" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-    <canvas id="bar_canvas_4" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-    <canvas id="bar_canvas_5" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-    <canvas id="bar_canvas_6" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-    <canvas id="bar_canvas_7" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-    <canvas id="bar_canvas_8" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-    <canvas id="bar_canvas_9" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+<div id="content_container" class="scroll" style="position: relative;">
+    <div id="canvasContainer" style="position: absolute;"
+         onmousedown="startMove(event); return true;"
+         onmouseup="endMove(event); return false;">
+        <canvas id="entity_canvas_" width=2048px height=768px class="canvas" style="z-index:1000"></canvas>
+        <canvas id="message_canvas_" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+        <canvas id="bar_canvas_0" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+        <canvas id="bar_canvas_1" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+        <canvas id="bar_canvas_2" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+        <canvas id="bar_canvas_3" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+        <canvas id="bar_canvas_4" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+        <canvas id="bar_canvas_5" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+        <canvas id="bar_canvas_6" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+        <canvas id="bar_canvas_7" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+        <canvas id="bar_canvas_8" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+        <canvas id="bar_canvas_9" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+    </div>
 </div>
+
 
 <div id="floating_container" class="expand">
     <div id="script_title" onclick="collapse()">
