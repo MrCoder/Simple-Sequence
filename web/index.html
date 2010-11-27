@@ -131,17 +131,21 @@
 
         function dragCanvas(event) {
             //            $('#canvasContainer').offset(event.screenX - window.orignalX);
-            $('#perf').text(window.orignalX - event.screenX + " left " + event.screenY + " down");
             var offset = event.screenX - window.orignalX;
-
             var totalOffset = window.lastXOffset + offset;
-            if (totalOffset < 0)
-                $('#canvasContainer').offset({ top: 10, left: totalOffset });
+
+            $('#perf').text(totalOffset + " left " + event.screenY + " down");
+            if (totalOffset < 0)  {
+                $('#canvasContainer').offset({ left: totalOffset });
+            }
         }
 
         function endMove(event) {
             $('#canvasContainer')[0].onmousemove = null;
             window.lastXOffset = window.lastXOffset + event.screenX - window.orignalX;
+            if (window.lastXOffset > 0){
+                window.lastXOffset = 0;
+            }
             //            alert(event.screenX + " left " + event.screenY + " down")
         }
 
@@ -166,7 +170,7 @@
 </head>
 <body>
 <div id="content_container" class="scroll" style="position: relative;">
-    <div id="canvasContainer" style="position: absolute;"
+    <div id="canvasContainer" style="position: relative;"
          onmousedown="startMove(event); return true;"
          onmouseup="endMove(event); return false;">
         <canvas id="entity_canvas_" width=2048px height=768px class="canvas" style="z-index:1000"></canvas>
