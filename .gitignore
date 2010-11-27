@@ -1,0 +1,5 @@
+.idea/
+*.iml
+*.class
+logs.txt
+TEST-*.txt
