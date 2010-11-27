@@ -28,7 +28,7 @@ function ActivitySequence(scriptContent) {
             canvasManager.addMessage(message);
         }
         var t1 = new Date().getTime();
-        $('#perf').text(t1 - t0);
+//        $('#perf').text(t1 - t0);
 
     }
 }

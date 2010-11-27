@@ -171,7 +171,7 @@
                   onblur="window.redraw()"></textarea>
         <script type="text/javascript">
             //            var supported = 'document.ready{\ncanvasManager.new()\n}';
-            var supported = 'document.ready{\n  canvasManager.new()}';
+            var supported = 'document.ready{\n  canvasManager.new(){\n    a = invokeMethod();\n    a.invokeMethod();\n  }\n}';
             var p = document.querySelector('#script_content');
             if (localStorage.script == null) {
                 localStorage.script = p.value = supported;

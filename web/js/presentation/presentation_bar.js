@@ -17,7 +17,7 @@ function PresentationBar(id, left, top, height, messageId) {
         var t0 = new Date().getTime();
         new BarDrawer().draw(barContext, this.left, this.top, this.height);//0~1ms
         var t1 = new Date().getTime();
-        $('#perf').text(t1 - t0);
+//        $('#perf').text(t1 - t0);
 
         if (this.parentBar) this.parentBar.extendByToBar(this);
     };
