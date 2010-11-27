@@ -135,7 +135,7 @@
             var totalOffset = window.lastXOffset + offset;
 
             $('#perf').text(totalOffset + " left " + event.screenY + " down");
-            if (totalOffset < 0)  {
+            if (totalOffset < 0) {
                 $('#canvasContainer').offset({ left: totalOffset });
             }
         }
@@ -143,7 +143,7 @@
         function endMove(event) {
             $('#canvasContainer')[0].onmousemove = null;
             window.lastXOffset = window.lastXOffset + event.screenX - window.orignalX;
-            if (window.lastXOffset > 0){
+            if (window.lastXOffset > 0) {
                 window.lastXOffset = 0;
             }
             //            alert(event.screenX + " left " + event.screenY + " down")
@@ -175,16 +175,7 @@
          onmouseup="endMove(event); return false;">
         <canvas id="entity_canvas_" width=2048px height=768px class="canvas" style="z-index:1000"></canvas>
         <canvas id="message_canvas_" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-        <canvas id="bar_canvas_0" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-        <canvas id="bar_canvas_1" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-        <canvas id="bar_canvas_2" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-        <canvas id="bar_canvas_3" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-        <canvas id="bar_canvas_4" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-        <canvas id="bar_canvas_5" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-        <canvas id="bar_canvas_6" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-        <canvas id="bar_canvas_7" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-        <canvas id="bar_canvas_8" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
-        <canvas id="bar_canvas_9" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+        
     </div>
 </div>
 
@@ -201,8 +192,8 @@
                   title="Script Content"
                   onblur="window.redraw()"></textarea>
         <script type="text/javascript">
-            //            var supported = 'document.ready{\ncanvasManager.new()\n}';
-            var supported = '// This is a comment. \ndocument.ready{\n  canvasManager.new(){\n    a = invokeMethod();\n    a.invokeMethod();\n  }\n}';
+            var supported = 'document.ready{\ncanvasManager.new()\n}';
+            //            var supported = '// This is a comment. \ndocument.ready{\n  canvasManager.new(){\n    a = invokeMethod();\n    a.invokeMethod();\n  }\n}';
             var p = document.querySelector('#script_content');
             if (localStorage.script == null) {
                 localStorage.script = p.value = supported;

@@ -11,8 +11,10 @@ function CanvasManager(container) {
     this.bars = new Array();
     this.lastMessageTop = 60;
     this.messageSpace = 30;
-    this.defaultBarHeight = 20;
+    this.defaultBarHeight = 30;
     this.canvases = new Array();
+    this.rootMessage = null;
+    this.rootMessages = new Array();
 
     this.drawGrid = function () {
         var canvas = createCanvas("grid", 0);
@@ -55,20 +57,7 @@ function CanvasManager(container) {
         }
     };
 
-    this.createABar = function (start, barEntityName, top, messageId) {
-        var t0 = new Date().getTime();
 
-        var barId = this.bars.length;
-        var barCanvasId = 'bar_canvas_' + barId;
-        var barContext = createCanvas(barCanvasId, 3000).getContext('2d');
-        this.barDrawer.draw(barContext, start, top, this.defaultBarHeight);
-        var richBar = new PresentationBar(barId, start, top, this.defaultBarHeight, messageId);
-        this.bars.push(richBar);
-        var t1 = new Date().getTime();
-//        $('#perf')[0].textContent += (t1 - t0);
-
-        return richBar;
-    };
 
     this.removeAllEntities = function() {
 
@@ -88,37 +77,53 @@ function CanvasManager(container) {
             var context = canvas.getContext('2d');
             context.clearRect(0, 0, canvas.width, canvas.height)
         }
+        var barCanvasId = 'bar_canvas_x';
+        var canvas = createCanvas(barCanvasId, 3000);
+        canvas.width = canvas.width;
         var t1 = new Date().getTime();
-//        $('#perf').text(t1 - t0);
+        //        $('#perf').text(t1 - t0);
         this.messages.length = 0;
+        this.rootMessages.length = 0;
         this.lastMessageTop = 60;
     };
 
-    this.removeAllBars = function(){
-        for (var i in this.bars) {
-            var bar = this.bars[i];
-            bar.clear();
+
+
+    this.drawBars = function() {
+        var barCanvasId = 'bar_canvas_x';
+        var canvas = createCanvas(barCanvasId, 3000);
+        canvas.width = canvas.width;
+        var barContext = canvas.getContext('2d');
+        for(var i in this.rootMessages){
+            var rootMessage = this.rootMessages[i];
+            this.drawBarForMessage(barContext, rootMessage);
         }
-        this.bars.length = 0;
+
+    };
+
+    this.drawBarForMessage = function(barContext, presentationMessage){
+
+        this.barDrawer.draw(barContext, presentationMessage.end, presentationMessage.top, presentationMessage.getHeight() - 5);
+        for (var i in presentationMessage.childrenMessages){
+            var subMessage = presentationMessage.childrenMessages[i];
+            this.drawBarForMessage(barContext, subMessage);
+        }
 
     };
 
     this.addMessage = function(message) {
-        var richMessage = this.drawMessage(message);
-
-        var top = this.lastMessageTop;
-        var fromBar = this.createABar(richMessage.start, message.from, richMessage.top, -1);
-
-        var toBar = this.createABar(richMessage.end, message.to, this.lastMessageTop, message.id);
-        toBar.parentBar = fromBar;
-        fromBar.extendByToBar(toBar);
+        var presentationMessage = this.drawMessage(message);
+        presentationMessage.height = this.defaultBarHeight;
+                                          
 
         if (message.subMessages.length > 0) {
             for (var i in message.subMessages) {
                 var subMessage = message.subMessages[i];
-                this.addSubMessage(message, subMessage);
+                this.addSubMessage(message, subMessage, presentationMessage);
             }
         }
+        this.rootMessages.push(presentationMessage);
+        
 
     };
 
@@ -130,19 +135,14 @@ function CanvasManager(container) {
         }
     };
 
-    this.addSubMessage = function(parentMessage, message) {
-        var richMessage = this.drawMessage(message);
-        var end = richMessage.end;
-        var fromBar = this.getBarByMessageId(parentMessage.id);
+    this.addSubMessage = function(parentMessage, message, parentPresentationMessage) {
+        var presentationMessage = this.drawMessage(message);
+        parentPresentationMessage.addSubMessage(presentationMessage);
 
-        var toBar = this.createABar(end, message.to, this.lastMessageTop, message.id);
-        toBar.parentBar = fromBar;
-        //        fromBar.extend(toBar.top + toBar.height+1);
-        fromBar.extendByToBar(toBar);
         if (message.subMessages.length > 0) {
             for (var i in message.subMessages) {
                 var subMessage = message.subMessages[i];
-                this.addSubMessage(message, subMessage);
+                this.addSubMessage(message, subMessage, presentationMessage);
             }
         }
     };
@@ -150,7 +150,6 @@ function CanvasManager(container) {
     this.drawMessage = function (message) {
         var entityFrom = this.getEntity(message.from);
         var entityTo = this.getEntity(message.to);
-        //        var messageCanvasId = 'message_canvas_' + this.messages.length;
         var messageCanvasId = 'message_canvas_';
         var messageContext = createCanvas(messageCanvasId, 5000).getContext('2d');
 
@@ -160,10 +159,13 @@ function CanvasManager(container) {
             new InternalInvokeDrawer()
                     .draw(messageContext, message.message, left, this.lastMessageTop);
             var id = this.messages.length;
-            var richMessage = new PresentationMessage(id, left, left, this.lastMessageTop);
-            this.lastMessageTop += this.messageSpace - 5;
-            this.messages.push(richMessage);
-            return richMessage;
+            this.lastMessageTop += this.messageSpace;
+            var presentationMessage = new PresentationMessage(id, left, left, this.lastMessageTop);
+            presentationMessage.height = this.defaultBarHeight + this.messageSpace;
+            this.lastMessageTop += this.messageSpace;
+            
+            this.messages.push(presentationMessage);
+            return presentationMessage;
         }
 
         var start = entityFrom.left + entityFrom.width / 2;
@@ -173,6 +175,8 @@ function CanvasManager(container) {
         this.messageDrawer.draw(messageContext, message.message, start, this.lastMessageTop, length);
 
         var richMessage = new PresentationMessage(this.messages.length, start, end, this.lastMessageTop);
+        richMessage.height = this.defaultBarHeight;
+
         this.messages.push(richMessage);
         return richMessage;
     };

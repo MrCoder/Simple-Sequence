@@ -16,7 +16,7 @@ function ActivitySequence(scriptContent) {
             canvasManager.addEntity(entity);
         }
         canvasManager.removeAllMessages();
-        canvasManager.removeAllBars();
+//        canvasManager.removeAllBars();
         this.entities = newEntities;
 
         var messageParser = new MessageParser();
@@ -27,6 +27,7 @@ function ActivitySequence(scriptContent) {
             var message = this.messages[i];
             canvasManager.addMessage(message);
         }
+        canvasManager.drawBars();
         var t1 = new Date().getTime();
 //        $('#perf').text(t1 - t0);
 

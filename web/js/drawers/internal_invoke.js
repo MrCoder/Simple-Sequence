@@ -1,6 +1,6 @@
 function InternalInvokeDrawer() {
     const length = 50;
-    const height = 25;
+    const height = 30;
     this.draw = function(context, message, left, top ) {
         context.beginPath();
         left = left + 5;
