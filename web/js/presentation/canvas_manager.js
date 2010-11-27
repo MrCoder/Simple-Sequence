@@ -36,7 +36,8 @@ function CanvasManager(container) {
     }
 
     this.addEntity = function(entityName) {
-        var canvasId = 'entity_canvas_' + entityName;
+        //        var canvasId = 'entity_canvas_' + entityName;
+        var canvasId = 'entity_canvas_';
         var context = createCanvas(canvasId, 1000).getContext('2d');
         var newLeft = 0;
         newLeft = this.rightBound + this.entitySpace;
@@ -46,21 +47,6 @@ function CanvasManager(container) {
         this.entities.push(entity);
     };
 
-    this.removeEntity = function(entityName) {
-        var entity = this.getEntity(entityName);
-        entity.clear();
-        this.entities = jQuery.grep(this.entities, function(value) {
-            return value.name != entityName;
-        });
-
-        this.rightBound = 0;
-        for (var i in this.entities) {
-            var entity = this.entities[i];
-            var right = entity.left + entity.width;
-            if (right > this.rightBound) this.rightBound = right;
-        }
-
-    };
 
     this.getEntity = function(entityName) {
         for (var i in this.entities) {
@@ -70,27 +56,51 @@ function CanvasManager(container) {
     };
 
     this.createABar = function (start, barEntityName, top, messageId) {
+        var t0 = new Date().getTime();
+
         var barId = this.bars.length;
         var barCanvasId = 'bar_canvas_' + barId;
         var barContext = createCanvas(barCanvasId, 3000).getContext('2d');
         this.barDrawer.draw(barContext, start, top, this.defaultBarHeight);
         var richBar = new PresentationBar(barId, start, top, this.defaultBarHeight, messageId);
         this.bars.push(richBar);
+        var t1 = new Date().getTime();
+//        $('#perf')[0].textContent += (t1 - t0);
+
         return richBar;
     };
 
+    this.removeAllEntities = function() {
+
+        var canvas = $('#entity_canvas_')[0];
+        if (canvas) {
+            var context = canvas.getContext('2d');
+            context.clearRect(0, 0, canvas.width, canvas.height)
+        }
+        this.rightBound = 0;
+    };
+
     this.removeAllMessages = function() {
+        var t0 = new Date().getTime();
+
         var canvas = $('#message_canvas_')[0];
-        if (canvas) canvas.width = canvas.width;
+        if (canvas) {
+            var context = canvas.getContext('2d');
+            context.clearRect(0, 0, canvas.width, canvas.height)
+        }
+        var t1 = new Date().getTime();
+//        $('#perf').text(t1 - t0);
+        this.messages.length = 0;
+        this.lastMessageTop = 60;
+    };
 
-
+    this.removeAllBars = function(){
         for (var i in this.bars) {
             var bar = this.bars[i];
             bar.clear();
         }
-        this.messages.length = 0;
         this.bars.length = 0;
-        this.lastMessageTop = 60;
+
     };
 
     this.addMessage = function(message) {

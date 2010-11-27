@@ -42,6 +42,8 @@
             }
             // do things you want to do
             window.canvasManager = new CanvasManager($('#canvasContainer'));
+            window.canvasManager.drawGrid();
+
             window.activitySequence = new ActivitySequence("");
 
             window.redraw();
@@ -68,7 +70,7 @@
             if (tmpToY > toY) tmpToY = toY;
 
             controlY = fromY / 2 + tmpToY / 2 + offsetY * (Math.random() - 0.5);
-//            context.moveTo(fromX, fromY);
+            //            context.moveTo(fromX, fromY);
             context.quadraticCurveTo(controlX, controlY, fromX, tmpToY);
             if (toY > tmpToY)
                 vertical_cairo_curve_to(context, fromX, tmpToY, toY);
@@ -95,22 +97,29 @@
         }
 
         function crazy_rect(context, left, top, width, height, radius) {
+            var t0 = new Date().getTime();
+
             context.moveTo(left + radius, top);
             horizontal_cairo_curve_to(context, left + radius, top, left + width - radius);
             context.quadraticCurveTo(left + width, top, left + width, top + radius);
-//            context.lineTo(left + width, top + height - radius);
+            //            context.lineTo(left + width, top + height - radius);
             vertical_cairo_curve_to(context, left + width, top + radius, top + height - radius);
             context.quadraticCurveTo(left + width, top + height, left + width - radius, top + height);
             horizontal_cairo_curve_to(context, left + width - radius, top + height, left + radius);
             context.quadraticCurveTo(left, top + height, left, top + height - radius);
             context.lineTo(left, top + radius);
             context.quadraticCurveTo(left, top, left + radius, top);
+            var t1 = new Date().getTime();
+            //            $('#perf').text(t1 - t0);
+
         }
 
         window.redraw = function () {
             var scriptContent = $("#script_content")[0].value;
-            window.canvasManager.drawGrid();
+            var t0 = new Date().getTime();
             window.activitySequence.draw(window.canvasManager, scriptContent);
+            var t1 = new Date().getTime();
+            //            $('#perf').text(t1 - t0);
         }
 
 
@@ -134,11 +143,24 @@
     </script>
 </head>
 <body>
-<div id="canvasContainer" class="scroll" style="position: relative;"></div>
+<div id="canvasContainer" class="scroll" style="position: relative;">
+    <canvas id="entity_canvas_" width=2048px height=768px class="canvas" style="z-index:1000"></canvas>
+    <canvas id="message_canvas_" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+    <canvas id="bar_canvas_0" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+    <canvas id="bar_canvas_1" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+    <canvas id="bar_canvas_2" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+    <canvas id="bar_canvas_3" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+    <canvas id="bar_canvas_4" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+    <canvas id="bar_canvas_5" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+    <canvas id="bar_canvas_6" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+    <canvas id="bar_canvas_7" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+    <canvas id="bar_canvas_8" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+    <canvas id="bar_canvas_9" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+</div>
 
 <div id="floating_container" class="expand">
     <div id="script_title" onclick="collapse()">
-        <span>Pseudo Code:</span><span>[Click on the canvas to draw the sequence.]</span></div>
+        <span id="perf">Pseudo Code:</span><span>[Click on the canvas to draw the sequence.]</span></div>
     <div style="float: right;">
             <span id="collapse_button" onclick="collapse()">
             </span>
@@ -149,7 +171,7 @@
                   onblur="window.redraw()"></textarea>
         <script type="text/javascript">
             //            var supported = 'document.ready{\ncanvasManager.new()\n}';
-            var supported = 'document.ready{\n  canvasManager.new(){\n    a = invokeMethod();\n    a.invokeMethod();\n  }\n}';
+            var supported = 'document.ready{\n  canvasManager.new()}';
             var p = document.querySelector('#script_content');
             if (localStorage.script == null) {
                 localStorage.script = p.value = supported;
