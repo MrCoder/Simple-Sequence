@@ -58,14 +58,14 @@
         // draw vertical line
         function vertical_cairo_curve_to(context, fromX, fromY, toY) {
             var controlX,controlY;
-            var offsetX = 20;
-            var offsetY = 10;
+            var offsetX = 5;
+            var offsetY = 5;
             controlX = fromX + offsetX * (Math.random() - 0.5);
             var tmpToY = fromY + 200;
             if (tmpToY > toY) tmpToY = toY;
 
             controlY = fromY / 2 + tmpToY / 2 + offsetY * (Math.random() - 0.5);
-            context.moveTo(fromX, fromY);
+//            context.moveTo(fromX, fromY);
             context.quadraticCurveTo(controlX, controlY, fromX, tmpToY);
             if (toY > tmpToY)
                 vertical_cairo_curve_to(context, fromX, tmpToY, toY);
@@ -78,23 +78,35 @@
             var offsetY = 5;
             controlY = fromY + offsetY * (Math.random() - 0.5);
             if (toX > fromX) {
-                var tmpToX = fromX + 30;
+                var tmpToX = fromX + 20;
                 if (tmpToX > toX) tmpToX = toX;
             } else {
-                var tmpToX = fromX - 30;
+                var tmpToX = fromX - 20;
                 if (tmpToX < toX) tmpToX = toX;
             }
 
             controlX = fromX / 2 + tmpToX / 2 + offsetX * (Math.random() - 0.5);
-//            context.moveTo(fromX, fromY);
             context.quadraticCurveTo(controlX, controlY, tmpToX, fromY);
-            if (toX > tmpToX)
+            if ((toX > fromX && toX > tmpToX) || (toX < fromX && toX < tmpToX))
                 horizontal_cairo_curve_to(context, tmpToX, fromY, toX);
         }
 
+        function crazy_rect(context, left, top, width, height, radius) {
+            context.moveTo(left + radius, top);
+            horizontal_cairo_curve_to(context, left + radius, top, left + width - radius);
+            context.quadraticCurveTo(left + width, top, left + width, top + radius);
+//            context.lineTo(left + width, top + height - radius);
+            vertical_cairo_curve_to(context, left + width, top + radius, top + height - radius);
+            context.quadraticCurveTo(left + width, top + height, left + width - radius, top + height);
+            horizontal_cairo_curve_to(context, left + width - radius, top + height, left + radius);
+            context.quadraticCurveTo(left, top + height, left, top + height - radius);
+            context.lineTo(left, top + radius);
+            context.quadraticCurveTo(left, top, left + radius, top);
+        }
 
         window.redraw = function () {
             var scriptContent = $("#script_content")[0].value;
+            window.canvasManager.drawGrid();
             window.activitySequence.draw(window.canvasManager, scriptContent);
         }
 

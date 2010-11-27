@@ -61,9 +61,14 @@ function CanvasManager(container) {
     this.defaultBarHeight = 20;
     this.canvases = new Array();
 
+    this.drawGrid = function () {
+        var canvas = createCanvas("grid", 0);
+        var context = canvas.getContext('2d');
+        var gridDrawer = new GridDrawer(context);
+        gridDrawer.draw(canvas.width, canvas.height);
+    };
+
     function createCanvas(canvasId, zIndex) {
-
-
         var canvas = $('#' + canvasId);
         if (canvas.length > 0) return canvas[0];
 
@@ -140,12 +145,10 @@ function CanvasManager(container) {
         var richMessage = this.drawMessage(message);
 
         if (message.from != message.to) {
-            var top = this.lastMessageTop - 1;
+            var top = this.lastMessageTop;
             var fromBar = this.createABar(richMessage.start, message.from, top);
-        }
 
-        var toBar = this.createABar(richMessage.end, message.to, this.lastMessageTop);
-        if (fromBar != undefined) {
+            var toBar = this.createABar(richMessage.end, message.to, this.lastMessageTop);
             toBar.parentBar = fromBar;
             fromBar.extend(toBar.top + toBar.height);
         }
@@ -172,13 +175,16 @@ function CanvasManager(container) {
     this.addSubMessage = function(message) {
         var richMessage = this.drawMessage(message);
         var end = richMessage.end;
+//        if (message.from != message.to) {
+            var fromBar = this.getBar(message.from);
 
-        var fromBar = this.getBar(message.from);
-
-        var toBar = this.createABar(end, message.to, this.lastMessageTop);
-        toBar.parentBar = fromBar;
-        fromBar.extend(toBar.top + toBar.height);
-
+            var toBar = this.createABar(end, message.to, this.lastMessageTop);
+            toBar.parentBar = fromBar;
+            fromBar.extend(toBar.top + toBar.height);
+//        } else{
+//            var fromBar = this.getBar(message.from);
+//            fromBar.extend(fromBar.top + fromBar.height + this.defaultBarHeight)
+//        }
         if (message.subMessages.length > 0) {
             for (var i in message.subMessages) {
                 var subMessage = message.subMessages[i];
