@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Simple Sequence</title>
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css">
+    <link rel="stylesheet" type="text/css" href="./css/reset-min.css">
     <link rel="stylesheet" href="./css/sequence.css">
 
     <!--[if IE]>
@@ -215,16 +215,25 @@
         <script type="text/javascript">
             //            var supported = 'document.ready{\ncanvasManager.new()\n}';
             var supported = '// This is a comment. \ndocument.ready{\n  canvasManager.new(){\n    a = invokeMethod();\n    a.invokeMethod();\n  }\n}';
-            var p = document.querySelector('#script_content');
+            var p = $("#script_content")[0];
             if (localStorage != null) {
                 if (localStorage.script == null) {
                     localStorage.script = p.value = supported;
                 } else {
                     p.value = localStorage.script;
                 }
-                p.addEventListener('keyup', function() {
-                    localStorage.script = p.value;
-                }, false);
+                if (p.addEventListener) {
+
+                    p.addEventListener('keyup', function() {
+                        localStorage.script = p.value;
+                    }, false);
+                } else if (p.attachEvent) {
+                    p.attachEvent('keyup', function() {
+                        localStorage.script = p.value;
+                    }, false);
+                }
+
+
             }
 
         </script>
