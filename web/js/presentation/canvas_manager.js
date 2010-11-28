@@ -66,6 +66,7 @@ function CanvasManager(container) {
             var context = canvas.getContext('2d');
             context.clearRect(0, 0, canvas.width, canvas.height)
         }
+        this.entities.length = 0;
         this.rightBound = 0;
     };
 
@@ -103,7 +104,13 @@ function CanvasManager(container) {
 
     this.drawBarForMessage = function(barContext, presentationMessage){
 
-        this.barDrawer.draw(barContext, presentationMessage.end, presentationMessage.top, presentationMessage.getHeight() - 5);
+        if (presentationMessage.childrenMessages.length <= 0){
+            this.barDrawer.draw(barContext, presentationMessage.end, presentationMessage.top, presentationMessage.getBarHeight() - 5);
+
+        }   else{
+
+            this.barDrawer.draw(barContext, presentationMessage.end, presentationMessage.top, presentationMessage.getBarHeight() - 3);
+        }
         for (var i in presentationMessage.childrenMessages){
             var subMessage = presentationMessage.childrenMessages[i];
             this.drawBarForMessage(barContext, subMessage);
@@ -113,8 +120,6 @@ function CanvasManager(container) {
 
     this.addMessage = function(message) {
         var presentationMessage = this.drawMessage(message);
-        presentationMessage.height = this.defaultBarHeight;
-                                          
 
         if (message.subMessages.length > 0) {
             for (var i in message.subMessages) {
@@ -123,9 +128,11 @@ function CanvasManager(container) {
             }
         }
         this.rootMessages.push(presentationMessage);
-        
+
 
     };
+
+    
 
 
     this.getBarByMessageId = function(messageId) {
@@ -162,8 +169,9 @@ function CanvasManager(container) {
             this.lastMessageTop += this.messageSpace;
             var presentationMessage = new PresentationMessage(id, left, left, this.lastMessageTop);
             presentationMessage.height = this.defaultBarHeight + this.messageSpace;
-            this.lastMessageTop += this.messageSpace;
-            
+
+//            this.lastMessageTop += this.messageSpace;
+
             this.messages.push(presentationMessage);
             return presentationMessage;
         }

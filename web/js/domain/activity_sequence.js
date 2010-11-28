@@ -1,7 +1,5 @@
 //This is the root data model for the sequence diagram
 function ActivitySequence(scriptContent) {
-    this.entities = new Array();
-    this.messages = new Array();
 
 
 
@@ -17,14 +15,17 @@ function ActivitySequence(scriptContent) {
         }
         canvasManager.removeAllMessages();
 //        canvasManager.removeAllBars();
-        this.entities = newEntities;
 
         var messageParser = new MessageParser();
 
-        this.messages = messageParser.parse(scriptContent);
+        var messages = messageParser.parse(scriptContent);
+
+
+
         var t0 = new Date().getTime();
-        for (var i in this.messages) {
-            var message = this.messages[i];
+        for (var i in messages) {
+            var message = messages[i];
+//            var pMessage = message.accept(new MessageConverter());
             canvasManager.addMessage(message);
         }
         canvasManager.drawBars();

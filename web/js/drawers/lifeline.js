@@ -6,8 +6,8 @@ function LifeLineDrawer() {
         var entityDrawer = new EntityDrawer();
         var entityWidth = entityDrawer.draw(context, entityName, left, top, selected);
         
-        var lineDrawer = new LineDrawer(context);
-        lineDrawer.draw(left + (entityWidth)/2, top + entityHeight, lifeLength);
+        var lineDrawer = new LineDrawer();
+        lineDrawer.draw(context,left + (entityWidth)/2, top + entityHeight, lifeLength);
 
         return entityWidth;
     }

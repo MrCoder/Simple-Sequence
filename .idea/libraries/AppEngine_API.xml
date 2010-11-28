@@ -2,6 +2,7 @@
   <library name="AppEngine API">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../appengine-java-sdk/lib/user" />
+      <root url="jar://$PROJECT_DIR$/../libs/JsTestDriver-1.2.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,9 +1,12 @@
-function PresentationMessage(id, start, end, top) {
+function PresentationMessage(id, start, end, top, fromEntity, toEntity) {
     this.id = id;
     this.start = start;
     this.end = end;
     this.top = top;
-    this.height = 0;
+    this.height = 30;
+    this.fromEntity = fromEntity;
+    this.toEntity = toEntity;
+    this.defaultBarHeight = 30;
 
     this.childrenMessages = new Array();
 
@@ -11,13 +14,23 @@ function PresentationMessage(id, start, end, top) {
         this.childrenMessages.push(subPresentationMessage);
     };
 
-    this.getHeight = function(){
-        var totalHeight = this.height;
-        for (var i in this.childrenMessages){
+    this.getChildrenHeight = function () {
+        var childrenHeight = 0;
+        for (var i in this.childrenMessages) {
             var childMessage = this.childrenMessages[i];
-            totalHeight += childMessage.getHeight();
+            childrenHeight += childMessage.getHeight();
         }
-        return totalHeight;
+        return childrenHeight;
+    };
+
+    this.getHeight = function(){
+        if (this.fromEntity == this.toEntity) this.height = 60;
+        return this.height + this.getChildrenHeight();
+    };
+
+    this.getBarHeight = function() {
+        var childrenHeight = this.getChildrenHeight();
+        return this.defaultBarHeight + childrenHeight;
     }
 
 }

@@ -1,5 +1,5 @@
-function LineDrawer(context) {
-    this.draw = function(left, top, height) {
+function LineDrawer() {
+    this.draw = function(context,left, top, height) {
         context.beginPath();
         context.moveTo(left, top);
 

@@ -97,44 +97,31 @@
         }
 
         function crazy_rect(context, left, top, width, height, radius) {
-            var t0 = new Date().getTime();
-
             context.moveTo(left + radius, top);
             horizontal_cairo_curve_to(context, left + radius, top, left + width - radius);
             context.quadraticCurveTo(left + width, top, left + width, top + radius);
-            //            context.lineTo(left + width, top + height - radius);
             vertical_cairo_curve_to(context, left + width, top + radius, top + height - radius);
             context.quadraticCurveTo(left + width, top + height, left + width - radius, top + height);
             horizontal_cairo_curve_to(context, left + width - radius, top + height, left + radius);
             context.quadraticCurveTo(left, top + height, left, top + height - radius);
             context.lineTo(left, top + radius);
             context.quadraticCurveTo(left, top, left + radius, top);
-            var t1 = new Date().getTime();
-            //            $('#perf').text(t1 - t0);
-
         }
 
         window.redraw = function () {
             var scriptContent = $("#script_content")[0].value;
-            var t0 = new Date().getTime();
             window.activitySequence.draw(window.canvasManager, scriptContent);
             window.lastXOffset = 0;
-            var t1 = new Date().getTime();
-                        $('#perf').text(t1 - t0);
         };
 
         function startMove(event) {
-            //            alert(event.screenX + " left " + event.screenY + " down")
             $('#canvasContainer')[0].onmousemove = dragCanvas;
             window.orignalX = event.screenX;
         }
 
         function dragCanvas(event) {
-            //            $('#canvasContainer').offset(event.screenX - window.orignalX);
             var offset = event.screenX - window.orignalX;
             var totalOffset = window.lastXOffset + offset;
-
-//            $('#perf').text(totalOffset + " left " + event.screenY + " down");
             if (totalOffset < 0) {
                 $('#canvasContainer').offset({ left: totalOffset });
             }
@@ -146,7 +133,9 @@
             if (window.lastXOffset > 0) {
                 window.lastXOffset = 0;
             }
-            //            alert(event.screenX + " left " + event.screenY + " down")
+            if (window.lastXOffset < -1000){
+                window.lastXOffset = -1000;
+            }
         }
 
     </script>
@@ -182,7 +171,7 @@
 
 <div id="floating_container" class="expand">
     <div id="script_title" onclick="collapse()">
-        <span id="perf">Pseudo Code:</span><span>[Click on the canvas to draw the sequence.]</span></div>
+        <span id="debug">Pseudo Code:</span><span>[Click on the canvas to draw the sequence.]</span></div>
     <div style="float: right;">
             <span id="collapse_button" onclick="collapse()">
             </span>
@@ -192,8 +181,8 @@
                   title="Script Content"
                   onblur="window.redraw()"></textarea>
         <script type="text/javascript">
-            var supported = 'document.ready{\ncanvasManager.new()\n}';
-            //            var supported = '// This is a comment. \ndocument.ready{\n  canvasManager.new(){\n    a = invokeMethod();\n    a.invokeMethod();\n  }\n}';
+//            var supported = 'document.ready{\ncanvasManager.new()\n}';
+            var supported = '// This is a comment. \ndocument.ready{\n  canvasManager.new(){\n    a = invokeMethod();\n    a.invokeMethod();\n  }\n}';
             var p = document.querySelector('#script_content');
             if (localStorage.script == null) {
                 localStorage.script = p.value = supported;
