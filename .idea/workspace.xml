@@ -7,41 +7,35 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/resource/tr.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resource/arrow_left.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/label.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/horizontal_arrow.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/message.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/domain/activity_sequence.js" afterPath="$PROJECT_DIR$/web/js/domain/activity_sequence.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/horizontal_line.js" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/presentation/message_convertor.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/arrow_icon_left.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resource/tl.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resource/arrow_right.gif" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/line.js" afterPath="$PROJECT_DIR$/web/js/drawers/line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/test/presentation/message_convertor_tests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/message_convertor.js" afterPath="$PROJECT_DIR$/web/js/presentation/message_convertor.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/entity.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/lifeline.js" afterPath="$PROJECT_DIR$/web/js/drawers/lifeline.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/test/presentation/message_convertor_tests.js" afterPath="$PROJECT_DIR$/web/test/presentation/message_convertor_tests.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/domain/message.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/css/sequence.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/line.js" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/test_config.yaml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resource/arrow_right.jpeg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/arrow_icon_right.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/domain/messages.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/AppEngine_API.xml" afterPath="$PROJECT_DIR$/.idea/libraries/AppEngine_API.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/grid.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/dots.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" afterPath="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/test/message_parser_tests.js" afterPath="$PROJECT_DIR$/web/test/parser/message_parser_tests.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resource/bl.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/domain/entities.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/domain/message.js" afterPath="$PROJECT_DIR$/web/js/domain/message.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resource/in.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/arrows.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/internal_invoke.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/lifeline.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/domain/activity_sequence.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/rect.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/js/drawers/sequence_printer.js" afterPath="" />
@@ -104,10 +98,28 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="canvas_manager.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="canvas_manager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="4" selection-start="4423" selection-end="4423" vertical-scroll-proportion="0.81707317">
+            <state line="157" column="0" selection-start="5743" selection-end="5743" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/drawers/message.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="9" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="52" selection-start="2152" selection-end="2152" vertical-scroll-proportion="-21.08">
               <folding />
             </state>
           </provider>
@@ -116,25 +128,7 @@
       <file leaf-file-name="presentation_message.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_message.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="36" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message_parser_tests.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/test/parser/message_parser_tests.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="75" selection-start="115" selection-end="231" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message_parser.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/parser/message_parser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+            <state line="33" column="57" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,16 +164,16 @@
       <file leaf-file-name="message_convertor_tests.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/test/presentation/message_convertor_tests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="50" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+            <state line="30" column="23" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message_convertor.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="message_convertor.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/presentation/message_convertor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="36" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+            <state line="2" column="22" selection-start="78" selection-end="78" vertical-scroll-proportion="0.034552846">
               <folding />
             </state>
           </provider>
@@ -188,7 +182,7 @@
       <file leaf-file-name="activity_sequence.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/domain/activity_sequence.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="30" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
+            <state line="30" column="66" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -208,7 +202,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/js/drawers/line.js" />
         <option value="$PROJECT_DIR$/js/drawers/lifeline.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/line.js" />
@@ -219,11 +212,12 @@
         <option value="$PROJECT_DIR$/web/test/message_parser_tests.js" />
         <option value="$PROJECT_DIR$/web/test_config.yaml" />
         <option value="$PROJECT_DIR$/web/js/domain/message.js" />
-        <option value="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
+        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/test/presentation/message_convertor_tests.js" />
-        <option value="$PROJECT_DIR$/web/js/presentation/message_convertor.js" />
         <option value="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" />
         <option value="$PROJECT_DIR$/web/js/domain/activity_sequence.js" />
+        <option value="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
+        <option value="$PROJECT_DIR$/web/js/presentation/message_convertor.js" />
       </list>
     </option>
   </component>
@@ -740,7 +734,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1705036" sideWeight="0.73740053" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1705036" sideWeight="0.73740053" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25331566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -816,7 +810,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/web/test/presentation/message_convertor_tests.js</url>
-          <line>42</line>
+          <line>57</line>
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -826,11 +820,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/bar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/drawers/lifeline.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="32" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" />
@@ -839,11 +828,6 @@
     <entry file="file://$PROJECT_DIR$/web/js/drawers/line.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="33" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="12" selection-start="8376" selection-end="8376" vertical-scroll-proportion="-48.28" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/domain/entities.js">
@@ -883,37 +867,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_message.js">
+    <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="36" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.0">
+        <state line="31" column="52" selection-start="2152" selection-end="2152" vertical-scroll-proportion="-21.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="9" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/test/presentation/message_convertor_tests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="50" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/presentation/message_convertor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="36" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+        <state line="30" column="23" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/domain/activity_sequence.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
+        <state line="30" column="66" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="57" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="4" selection-start="4423" selection-end="4423" vertical-scroll-proportion="0.81707317">
+        <state line="157" column="0" selection-start="5743" selection-end="5743" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/presentation/message_convertor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="22" selection-start="78" selection-end="78" vertical-scroll-proportion="0.034552846">
           <folding />
         </state>
       </provider>

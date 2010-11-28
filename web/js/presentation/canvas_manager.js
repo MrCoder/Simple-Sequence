@@ -58,7 +58,6 @@ function CanvasManager(container) {
     };
 
 
-
     this.removeAllEntities = function() {
 
         var canvas = $('#entity_canvas_')[0];
@@ -89,29 +88,28 @@ function CanvasManager(container) {
     };
 
 
-
     this.drawBars = function() {
         var barCanvasId = 'bar_canvas_x';
         var canvas = createCanvas(barCanvasId, 3000);
         canvas.width = canvas.width;
         var barContext = canvas.getContext('2d');
-        for(var i in this.rootMessages){
+        for (var i in this.rootMessages) {
             var rootMessage = this.rootMessages[i];
             this.drawBarForMessage(barContext, rootMessage);
         }
 
     };
 
-    this.drawBarForMessage = function(barContext, presentationMessage){
+    this.drawBarForMessage = function(barContext, presentationMessage) {
 
-        if (presentationMessage.childrenMessages.length <= 0){
+        if (presentationMessage.childrenMessages.length <= 0) {
             this.barDrawer.draw(barContext, presentationMessage.end, presentationMessage.top, presentationMessage.getBarHeight() - 5);
 
-        }   else{
+        } else {
 
             this.barDrawer.draw(barContext, presentationMessage.end, presentationMessage.top, presentationMessage.getBarHeight() - 3);
         }
-        for (var i in presentationMessage.childrenMessages){
+        for (var i in presentationMessage.childrenMessages) {
             var subMessage = presentationMessage.childrenMessages[i];
             this.drawBarForMessage(barContext, subMessage);
         }
@@ -132,7 +130,37 @@ function CanvasManager(container) {
 
     };
 
-    
+    this.drawPresentationMessage = function(presentationMessage) {
+        var messageCanvasId = 'message_canvas_';
+        var messageContext = createCanvas(messageCanvasId, 5000).getContext('2d');
+        var entityFrom = this.getEntity(presentationMessage.fromEntity);
+        var entityTo = this.getEntity(presentationMessage.toEntity);
+        var barCanvasId = 'bar_canvas_x';
+        var canvas = createCanvas(barCanvasId, 3000);
+        //        canvas.width = canvas.width;
+        var barContext = canvas.getContext('2d');
+        if (entityFrom == entityTo) {
+            var left = entityFrom.left + entityFrom.width / 2;
+            new InternalInvokeDrawer()
+                    .draw(messageContext, presentationMessage.messageText, left, presentationMessage.top);
+            this.barDrawer.draw(barContext, left, presentationMessage.top+30, presentationMessage.getBarHeight())
+
+        } else {
+            var start = entityFrom.left + entityFrom.width / 2;
+            var end = entityTo.left + entityTo.width / 2;
+            var length = end - start;
+            this.messageDrawer.draw(messageContext, presentationMessage.messageText, start, presentationMessage.top, length);
+
+
+            this.barDrawer.draw(barContext, end, presentationMessage.top, presentationMessage.getBarHeight())
+
+        }
+
+        for (var i in presentationMessage.childrenMessages) {
+            var subPMessage = presentationMessage.childrenMessages[i];
+            this.drawPresentationMessage(subPMessage);
+        }
+    };
 
 
     this.getBarByMessageId = function(messageId) {
@@ -170,7 +198,7 @@ function CanvasManager(container) {
             var presentationMessage = new PresentationMessage(id, left, left, this.lastMessageTop);
             presentationMessage.height = this.defaultBarHeight + this.messageSpace;
 
-//            this.lastMessageTop += this.messageSpace;
+            //            this.lastMessageTop += this.messageSpace;
 
             this.messages.push(presentationMessage);
             return presentationMessage;

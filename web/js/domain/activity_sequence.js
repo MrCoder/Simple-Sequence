@@ -23,12 +23,15 @@ function ActivitySequence(scriptContent) {
 
 
         var t0 = new Date().getTime();
+        var messageConverter = new MessageConverter();
         for (var i in messages) {
             var message = messages[i];
-//            var pMessage = message.accept(new MessageConverter());
-            canvasManager.addMessage(message);
+            var pMessage = message.accept(messageConverter);
+            canvasManager.drawPresentationMessage(pMessage);
+            messageConverter.topMargin = pMessage.top + pMessage.getHeight();
+            //            canvasManager.addMessage(message);
         }
-        canvasManager.drawBars();
+//        canvasManager.drawBars();
         var t1 = new Date().getTime();
 //        $('#perf').text(t1 - t0);
 

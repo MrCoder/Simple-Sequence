@@ -15,10 +15,26 @@ MessageConverterTest = TestCase("MessageConverterTest", {
         assertEquals(30, presentationMessage.getBarHeight());
 
     },
+
+    /**
+     * a{f}
+     */
+    test_a_f_one_presentation_message: function() {
+        var messageParser = new MessageParser();
+        var messages = messageParser.parse("a{f}");
+        var syncMessage = messages[0];
+        var presentationMessage = syncMessage.accept(new MessageConverter());
+        assertEquals("CLIENT", presentationMessage.fromEntity);
+        assertEquals("CLIENT", presentationMessage.toEntity);
+        assertEquals(0, presentationMessage.top - 60);
+        assertEquals(120, presentationMessage.getHeight());
+        assertEquals(90, presentationMessage.getBarHeight());
+
+    },
     /**
      * A.a
      */
-    test_one_message_to_one_presentation_message: function() {
+    test_A_a_presentation_message: function() {
         var messageParser = new MessageParser();
         var messages = messageParser.parse("A.a");
         var syncMessage = messages[0];

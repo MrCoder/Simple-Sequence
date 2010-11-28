@@ -1,4 +1,4 @@
-function PresentationMessage(id, start, end, top, fromEntity, toEntity) {
+function PresentationMessage(id, start, end, top, fromEntity, toEntity, messageText) {
     this.id = id;
     this.start = start;
     this.end = end;
@@ -7,6 +7,7 @@ function PresentationMessage(id, start, end, top, fromEntity, toEntity) {
     this.fromEntity = fromEntity;
     this.toEntity = toEntity;
     this.defaultBarHeight = 30;
+    this.messageText = messageText;
 
     this.childrenMessages = new Array();
 
@@ -30,7 +31,7 @@ function PresentationMessage(id, start, end, top, fromEntity, toEntity) {
 
     this.getBarHeight = function() {
         var childrenHeight = this.getChildrenHeight();
-        return this.defaultBarHeight + childrenHeight;
+        return this.defaultBarHeight + childrenHeight - 5;
     }
 
 }
