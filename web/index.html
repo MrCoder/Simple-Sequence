@@ -48,11 +48,7 @@
         });
 
         jQuery(document).ready(function() {
-            // do things you want to do
-            window.canvasManager = new CanvasManager($('#canvasContainer'));
-            window.canvasManager.drawGrid();
-            window.activitySequence = new ActivitySequence("");
-            window.redraw();
+
         });
 
 
@@ -116,6 +112,13 @@
 
         window.redraw = function () {
             var scriptContent = $("#script_content")[0].value;
+            if (window.canvasManager == null) {
+                window.canvasManager = new CanvasManager($('#canvasContainer'));
+                window.canvasManager.drawGrid();
+            }
+            if (window.activitySequence == null) {
+                window.activitySequence = new ActivitySequence("");
+            }
             window.activitySequence.draw(window.canvasManager, scriptContent);
             window.lastXOffset = 0;
             window.lastYOffset = 0;
@@ -168,23 +171,7 @@
         }
 
     </script>
-    <script type="text/javascript">
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-1211588-8']);
-        _gaq.push(['_setDomainName', '.appspot.com']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
 </head>
 <body>
 <div id="content_container" class="scroll" style="position: relative;">
@@ -262,5 +249,30 @@
     <img id="arrow_left" src="resource/arrow_left.gif">
     <img id="arrow_right" src="resource/arrow_right.gif">
 </span>
+
+<script type="text/javascript">
+    // do things you want to do
+    window.canvasManager = new CanvasManager($('#canvasContainer'));
+    window.canvasManager.drawGrid();
+    window.activitySequence = new ActivitySequence("");
+    window.redraw();
+</script>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1211588-8']);
+    _gaq.push(['_setDomainName', '.appspot.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
 </body>
 </html>
