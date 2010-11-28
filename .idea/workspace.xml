@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b0121167-156e-49c8-b314-9887442a7ca6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" afterPath="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/label.js" afterPath="$PROJECT_DIR$/web/js/drawers/label.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/entity.js" afterPath="$PROJECT_DIR$/web/js/drawers/entity.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/excanvas.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/arrow_icon_left.js" afterPath="$PROJECT_DIR$/web/js/drawers/arrow_icon_left.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js" afterPath="$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js" />
     </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -113,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="16" selection-start="2713" selection-end="2713" vertical-scroll-proportion="-10.2">
+            <state line="191" column="93" selection-start="8786" selection-end="8786" vertical-scroll-proportion="0.18923934">
               <folding />
             </state>
           </provider>
@@ -149,10 +145,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="internal_invoke.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="internal_invoke.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/drawers/internal_invoke.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="7" selection-start="62" selection-end="62" vertical-scroll-proportion="0.075555556">
+            <state line="2" column="7" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -184,10 +180,10 @@
         <option value="$PROJECT_DIR$/web/js/drawers/message.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/label.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/entity.js" />
-        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/js/drawers/arrow_icon_left.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
+        <option value="$PROJECT_DIR$/web/index.html" />
       </list>
     </option>
   </component>
@@ -645,11 +641,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15782493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15782493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39920425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -663,7 +659,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1705036" sideWeight="0.6618037" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1705036" sideWeight="0.6618037" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25331566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -825,13 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="16" selection-start="2713" selection-end="2713" vertical-scroll-proportion="-10.2">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="459" selection-start="6445" selection-end="6445" vertical-scroll-proportion="0.0">
@@ -855,7 +844,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/drawers/internal_invoke.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="7" selection-start="62" selection-end="62" vertical-scroll-proportion="0.075555556">
+        <state line="2" column="7" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="93" selection-start="8786" selection-end="8786" vertical-scroll-proportion="0.18923934">
           <folding />
         </state>
       </provider>
