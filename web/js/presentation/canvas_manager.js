@@ -6,24 +6,20 @@ function CanvasManager(container) {
     this.entitySpace = 60.1;
     this.lifeLenght = 2000;
     this.rightBound = 0;
-    this.messages = new Array();
     this.entities = new Array();
 
     this.drawGrid = function () {
-        var canvas = createCanvas("grid", 0);
+        var canvas = document.getElementById("grid");
         var context = canvas.getContext('2d');
         var gridDrawer = new GridDrawer(context);
         gridDrawer.draw(canvas.width, canvas.height);
     };
 
-    function createCanvas(canvasId, zIndex) {
-        return document.getElementById(canvasId);
-    }
 
     this.addEntity = function(entityName) {
         //        var canvasId = 'entity_canvas_' + entityName;
         var canvasId = 'entity_canvas_';
-        var context = createCanvas(canvasId, 1000).getContext('2d');
+        var context = document.getElementById(canvasId).getContext('2d');
         var newLeft = 0;
         newLeft = this.rightBound + this.entitySpace;
         var entityWidth = this.lifeLineDrawer.draw(context, entityName, newLeft, this.lifeLenght, false);
@@ -53,34 +49,26 @@ function CanvasManager(container) {
     };
 
     this.removeAllMessages = function() {
-        var t0 = new Date().getTime();
-
         var canvas = $('#message_canvas_')[0];
         if (canvas) {
             var context = canvas.getContext('2d');
             context.clearRect(0, 0, canvas.width, canvas.height)
         }
-        var barCanvasId = 'bar_canvas_x';
-        var canvas = createCanvas(barCanvasId, 3000);
-        canvas.width = canvas.width;
-        var t1 = new Date().getTime();
-
     };
 
     this.drawPresentationMessage = function(presentationMessage) {
         var messageCanvasId = 'message_canvas_';
-        var messageContext = createCanvas(messageCanvasId, 5000).getContext('2d');
+        var messageContext = document.getElementById(messageCanvasId).getContext('2d');
         var entityFrom = this.getEntity(presentationMessage.fromEntity);
         var entityTo = this.getEntity(presentationMessage.toEntity);
-        var barCanvasId = 'bar_canvas_x';
-        var canvas = createCanvas(barCanvasId, 3000);
-        //        canvas.width = canvas.width;
+        var barCanvasId = 'entity_canvas_';
+        var canvas = document.getElementById(barCanvasId);
         var barContext = canvas.getContext('2d');
         if (entityFrom == entityTo) {
             var left = entityFrom.left + entityFrom.width / 2;
             new InternalInvokeDrawer()
                     .draw(messageContext, presentationMessage.messageText, left, presentationMessage.top);
-            this.barDrawer.draw(barContext, left, presentationMessage.top+30, presentationMessage.getBarHeight())
+            this.barDrawer.draw(barContext, left, presentationMessage.top + 30, presentationMessage.getBarHeight())
 
         } else {
             var start = entityFrom.left + entityFrom.width / 2;
@@ -98,6 +86,6 @@ function CanvasManager(container) {
             this.drawPresentationMessage(subPMessage);
         }
     };
-    
+
 }
 

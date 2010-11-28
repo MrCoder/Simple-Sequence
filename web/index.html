@@ -45,10 +45,10 @@
                 // check readystate in safari browser to ensure images are done loading
                 setTimeout(arguments.callee, 100);
             }
-        });
-
-        jQuery(document).ready(function() {
-
+            window.canvasManager = new CanvasManager($('#canvasContainer'));
+            window.canvasManager.drawGrid();
+            window.activitySequence = new ActivitySequence("");
+            window.redraw();
         });
 
 
@@ -112,13 +112,6 @@
 
         window.redraw = function () {
             var scriptContent = $("#script_content")[0].value;
-            if (window.canvasManager == null) {
-                window.canvasManager = new CanvasManager($('#canvasContainer'));
-                window.canvasManager.drawGrid();
-            }
-            if (window.activitySequence == null) {
-                window.activitySequence = new ActivitySequence("");
-            }
             window.activitySequence.draw(window.canvasManager, scriptContent);
             window.lastXOffset = 0;
             window.lastYOffset = 0;
@@ -137,23 +130,24 @@
         }
 
         function dragCanvas(event) {
+            if (event == null) event = window.event;
             var offsetY = event.screenY - window.orignalY;
             var totalOffsetY = window.lastYOffset + offsetY;
             //            $('#debug').text(totalOffsetY);
-            if (totalOffsetY < 10) {
-                $('#canvasContainer').offset({ top: totalOffsetY });
-            }
             var offsetX = event.screenX - window.orignalX;
             var totalOffsetX = window.lastXOffset + offsetX;
-            if (totalOffsetX < 10) {
-                $('#canvasContainer').offset({ left: totalOffsetX });
+            if (totalOffsetY < 10 && totalOffsetX < 10) {
+                $('#canvasContainer').offset({ left: totalOffsetX, top: totalOffsetY });
             }
-
-
+//            if (totalOffsetX < 10) {
+//                $('#canvasContainer').offset({ left: totalOffsetX });
+//            }
         }
 
         function endMove(event) {
             $('#canvasContainer')[0].onmousemove = null;
+            if (event == null) event = window.event;
+            
             window.lastXOffset = window.lastXOffset + event.screenX - window.orignalX;
             window.lastYOffset = window.lastYOffset + event.screenY - window.orignalY;
             if (window.lastXOffset > 0) {
@@ -250,13 +244,7 @@
     <img id="arrow_right" src="resource/arrow_right.gif">
 </span>
 
-<script type="text/javascript">
-    // do things you want to do
-    window.canvasManager = new CanvasManager($('#canvasContainer'));
-    window.canvasManager.drawGrid();
-    window.activitySequence = new ActivitySequence("");
-    window.redraw();
-</script>
+
 <script type="text/javascript">
 
     var _gaq = _gaq || [];

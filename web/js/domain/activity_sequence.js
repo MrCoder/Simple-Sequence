@@ -4,9 +4,6 @@ function ActivitySequence(scriptContent) {
 
 
     this.draw = function(canvasManager, scriptContent) {
-
-        //
-        //        this.handleEntities(newEntities, this.entities, canvasManager);
         canvasManager.removeAllEntities();
         var newEntities = getEntities(scriptContent);
         for (var i in newEntities) {
@@ -14,26 +11,14 @@ function ActivitySequence(scriptContent) {
             canvasManager.addEntity(entity);
         }
         canvasManager.removeAllMessages();
-//        canvasManager.removeAllBars();
-
         var messageParser = new MessageParser();
-
         var messages = messageParser.parse(scriptContent);
-
-
-
-        var t0 = new Date().getTime();
         var messageConverter = new MessageConverter();
         for (var i in messages) {
             var message = messages[i];
             var pMessage = message.accept(messageConverter);
             canvasManager.drawPresentationMessage(pMessage);
             messageConverter.topMargin = pMessage.top + pMessage.getHeight();
-            //            canvasManager.addMessage(message);
         }
-//        canvasManager.drawBars();
-        var t1 = new Date().getTime();
-//        $('#perf').text(t1 - t0);
-
     }
 }
