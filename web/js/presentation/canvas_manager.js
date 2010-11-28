@@ -17,17 +17,7 @@ function CanvasManager(container) {
     };
 
     function createCanvas(canvasId, zIndex) {
-        var canvas = $('#' + canvasId);
-        if (canvas.length > 0) return canvas[0];
-
-        var canvasEle = $("<canvas id='" + canvasId + "' class='canvas'></canvas>");
-
-        container.append(canvasEle);
-        canvasEle[0].width = canvasEle[0].clientWidth;
-        canvasEle[0].height = canvasEle[0].clientHeight;
-        canvasEle.zIndex(zIndex);
-
-        return canvasEle[0];
+        return document.getElementById(canvasId);
     }
 
     this.addEntity = function(entityName) {
