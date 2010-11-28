@@ -64,8 +64,8 @@
         // draw vertical line
         function vertical_cairo_curve_to(context, fromX, fromY, toY) {
             var controlX,controlY;
-            var offsetX = 5;
-            var offsetY = 5;
+            var offsetX = 3;
+            var offsetY = 3;
             controlX = fromX + offsetX * (Math.random() - 0.5);
             var tmpToY = fromY + 200;
             if (tmpToY > toY) tmpToY = toY;
@@ -80,8 +80,8 @@
         // draw horizontal line
         function horizontal_cairo_curve_to(context, fromX, fromY, toX) {
             var controlX,controlY;
-            var offsetX = 5;
-            var offsetY = 5;
+            var offsetX = 3;
+            var offsetY = 3;
             controlY = fromY + offsetY * (Math.random() - 0.5);
             if (toX > fromX) {
                 var tmpToX = fromX + 20;
@@ -113,29 +113,52 @@
             var scriptContent = $("#script_content")[0].value;
             window.activitySequence.draw(window.canvasManager, scriptContent);
             window.lastXOffset = 0;
+            window.lastYOffset = 0;
         };
+
+        function repositCanvas() {
+            $('#canvasContainer').offset({ top: 0, left: 0 });
+            window.lastXOffset = 0;
+            window.lastYOffset = 0;
+        }
 
         function startMove(event) {
             $('#canvasContainer')[0].onmousemove = dragCanvas;
             window.orignalX = event.screenX;
+            window.orignalY = event.screenY;
         }
 
         function dragCanvas(event) {
-            var offset = event.screenX - window.orignalX;
-            var totalOffset = window.lastXOffset + offset;
-            if (totalOffset < 0) {
-                $('#canvasContainer').offset({ left: totalOffset });
+            var offsetY = event.screenY - window.orignalY;
+            var totalOffsetY = window.lastYOffset + offsetY;
+//            $('#debug').text(totalOffsetY);
+            if (totalOffsetY < 10) {
+                $('#canvasContainer').offset({ top: totalOffsetY });
             }
+            var offsetX = event.screenX - window.orignalX;
+            var totalOffsetX = window.lastXOffset + offsetX;
+            if (totalOffsetX < 10) {
+                $('#canvasContainer').offset({ left: totalOffsetX });
+            }
+
+
         }
 
         function endMove(event) {
             $('#canvasContainer')[0].onmousemove = null;
             window.lastXOffset = window.lastXOffset + event.screenX - window.orignalX;
+            window.lastYOffset = window.lastYOffset + event.screenY - window.orignalY;
             if (window.lastXOffset > 0) {
                 window.lastXOffset = 0;
             }
             if (window.lastXOffset < -1000){
                 window.lastXOffset = -1000;
+            }
+            if (window.lastYOffset > 0) {
+                window.lastYOffset = 0;
+            }
+            if (window.lastYOffset < -1500){
+                window.lastYOffset = -1500;
             }
         }
 
@@ -162,9 +185,10 @@
 <div id="content_container" class="scroll" style="position: relative;">
     <div id="canvasContainer" style="position: relative;"
          onmousedown="startMove(event); return true;"
-         onmouseup="endMove(event); return false;">
-        <canvas id="entity_canvas_" width=2048px height=768px class="canvas" style="z-index:1000"></canvas>
-        <canvas id="message_canvas_" width=2048px height=768px class="canvas" style="z-index:5000"></canvas>
+         onmouseup="endMove(event); return false;"
+            ondblclick="repositCanvas(); return true;">
+        <canvas id="entity_canvas_" width=2048px height=2048px class="canvas" style="z-index:1000"></canvas>
+        <canvas id="message_canvas_" width=2048px height=2048px class="canvas" style="z-index:5000"></canvas>
         
     </div>
 </div>
@@ -180,7 +204,7 @@
     <div id="script_container">
         <textarea id="script_content"
                   title="Script Content"
-                  onblur="window.redraw()"></textarea>
+                  onblur="window.redraw()" onkeyup="window.redraw()"></textarea>
         <script type="text/javascript">
 //            var supported = 'document.ready{\ncanvasManager.new()\n}';
             var supported = '// This is a comment. \ndocument.ready{\n  canvasManager.new(){\n    a = invokeMethod();\n    a.invokeMethod();\n  }\n}';

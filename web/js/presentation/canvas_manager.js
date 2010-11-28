@@ -4,7 +4,7 @@ function CanvasManager(container) {
     this.internlInvokeDrawer = new InternalInvokeDrawer();
     this.barDrawer = new BarDrawer();
     this.entitySpace = 60.1;
-    this.lifeLenght = 700;
+    this.lifeLenght = 2000;
     this.rightBound = 0;
     this.messages = new Array();
     this.entities = new Array();
