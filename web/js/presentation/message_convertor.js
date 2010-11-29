@@ -9,7 +9,7 @@ function MessageConverter() {
         var nextTop = this.topMargin;
         if (this.currentPresentationMessage)
             nextTop = this.currentPresentationMessage.top + this.currentPresentationMessage.getHeight();
-        var presentationMessage = new PresentationMessage(this.idGenerator++, 0, 0, nextTop, syncMessage.from, syncMessage.to, syncMessage.message);
+        var presentationMessage = new PresentationMessage(this.idGenerator++, nextTop, syncMessage.from, syncMessage.to, syncMessage.message);
         for (var i in syncMessage.subMessages) {
             var oldCurrent = this.currentPresentationMessage;
             this.currentPresentationMessage = presentationMessage;

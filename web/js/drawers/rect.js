@@ -4,7 +4,7 @@ function RectangleDrawer(context) {
         var radius = 5;
 
         context.beginPath();
-        crazy_rect(context, left, top, width, height, radius);
+        hand_drawing_rect(context, left, top, width, height, radius);
 //        context.moveTo(left+radius, top);
 //        horizontal_cairo_curve_to(context, left + radius, top, left + width - radius);
 //        context.quadraticCurveTo(left+width, top, left+width, top+radius);

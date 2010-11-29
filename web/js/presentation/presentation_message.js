@@ -1,7 +1,5 @@
-function PresentationMessage(id, start, end, top, fromEntity, toEntity, messageText) {
+function PresentationMessage(id, top, fromEntity, toEntity, messageText) {
     this.id = id;
-    this.start = start;
-    this.end = end;
     this.top = top;
     this.height = 30;
     this.fromEntity = fromEntity;

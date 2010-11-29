@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b0121167-156e-49c8-b314-9887442a7ca6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" afterPath="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/domain/activity_sequence.js" afterPath="$PROJECT_DIR$/web/js/domain/activity_sequence.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/util/string.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/bar.js" afterPath="$PROJECT_DIR$/web/js/drawers/bar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" afterPath="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/drawers/hand_drawing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/rect.js" afterPath="$PROJECT_DIR$/web/js/drawers/rect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/line.js" afterPath="$PROJECT_DIR$/web/js/drawers/line.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/message_convertor.js" afterPath="$PROJECT_DIR$/web/js/presentation/message_convertor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/horizontal_line.js" afterPath="$PROJECT_DIR$/web/js/drawers/horizontal_line.js" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -66,82 +72,28 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="entity.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/drawers/entity.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="31" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="144" column="13" selection-start="7101" selection-end="7101" vertical-scroll-proportion="-97.92">
+            <state line="13" column="40" selection-start="633" selection-end="633" vertical-scroll-proportion="-8.84">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appengine-web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/appengine-web.xml">
+      <file leaf-file-name="rect.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/drawers/rect.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="71" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+            <state line="6" column="20" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canvas_manager.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
+      <file leaf-file-name="horizontal_line.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/drawers/horizontal_line.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="6" selection-start="1918" selection-end="1918" vertical-scroll-proportion="1.9132231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_sequence.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/domain/activity_sequence.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="30" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message_parser.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/parser/message_parser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="33" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="entities.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/domain/entities.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="16" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arrow_icon_left.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/drawers/arrow_icon_left.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="7" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arrow_icon_right.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="7" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+            <state line="6" column="19" selection-start="265" selection-end="282" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -150,7 +102,61 @@
       <file leaf-file-name="internal_invoke.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/drawers/internal_invoke.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="7" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+            <state line="9" column="36" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lifeline.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/drawers/lifeline.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="22" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="line.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/drawers/line.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="34" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bar.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/js/drawers/bar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="39" selection-start="482" selection-end="482" vertical-scroll-proportion="0.35619047">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hand_drawing.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/drawers/hand_drawing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="1" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="string.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/util/string.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="2" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message_convertor.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/presentation/message_convertor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="46" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,22 +176,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
-        <option value="$PROJECT_DIR$/web/js/presentation/message_convertor.js" />
-        <option value="$PROJECT_DIR$/web/css/sequence.css" />
-        <option value="$PROJECT_DIR$/web/js/drawers/message.js" />
-        <option value="$PROJECT_DIR$/web/js/drawers/label.js" />
-        <option value="$PROJECT_DIR$/web/js/drawers/entity.js" />
-        <option value="$PROJECT_DIR$/web/js/drawers/arrow_icon_left.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js" />
-        <option value="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
         <option value="$PROJECT_DIR$/web/js/domain/entities.js" />
         <option value="$PROJECT_DIR$/web/js/parser/message_parser.js" />
         <option value="$PROJECT_DIR$/web/js/excanvas.js" />
-        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" />
         <option value="$PROJECT_DIR$/web/js/domain/activity_sequence.js" />
         <option value="$PROJECT_DIR$/web/js/presentation/canvas_manager.js" />
+        <option value="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
+        <option value="$PROJECT_DIR$/web/js/util/string.js" />
+        <option value="$PROJECT_DIR$/web/js/drawers/hand_drawing.js" />
+        <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/web/js/drawers/rect.js" />
+        <option value="$PROJECT_DIR$/web/js/drawers/horizontal_line.js" />
+        <option value="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
+        <option value="$PROJECT_DIR$/web/js/drawers/line.js" />
+        <option value="$PROJECT_DIR$/web/js/drawers/bar.js" />
       </list>
     </option>
   </component>
@@ -355,6 +361,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seqDia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seqDia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seqDia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seqDia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -764,71 +814,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/css/sequence.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/message.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="34" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/horizontal_arrow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="40" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="518" selection-start="9085" selection-end="9085" vertical-scroll-proportion="0.20070423" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/excanvas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1415" column="7" selection-start="41209" selection-end="41209" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/label.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/entity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="31" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/parser/message_parser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="33" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/domain/entities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="16" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/arrow_icon_left.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="7" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/internal_invoke.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="7" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="13" selection-start="7101" selection-end="7101" vertical-scroll-proportion="-97.92">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/appengine-web.xml">
@@ -847,7 +835,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/presentation/canvas_manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="6" selection-start="1918" selection-end="1918" vertical-scroll-proportion="1.9132231">
+        <state line="56" column="6" selection-start="1918" selection-end="1918" vertical-scroll-proportion="-35.615383">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test/presentation/message_convertor_tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="60" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/presentation/presentation_message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="33" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/presentation/message_convertor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="46" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/util/string.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="2" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/hand_drawing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="1" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="40" selection-start="633" selection-end="633" vertical-scroll-proportion="-8.84">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/rect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="20" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/horizontal_line.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="19" selection-start="265" selection-end="282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/internal_invoke.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="36" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/lifeline.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="22" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/line.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="34" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="39" selection-start="482" selection-end="482" vertical-scroll-proportion="0.35619047">
           <folding />
         </state>
       </provider>

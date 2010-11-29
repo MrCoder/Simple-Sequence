@@ -5,9 +5,9 @@ function InternalInvokeDrawer() {
         context.beginPath();
         left = left + 5;
         context.moveTo(left, top);
-        horizontal_cairo_curve_to(context, left, top, left + length);
+        horizontal_hand_drawing_line_to(context, left, top, left + length);
         context.quadraticCurveTo(left + length + 5, top + 5, left + length, top + height);
-        horizontal_cairo_curve_to(context, left + length, top + height, left);
+        horizontal_hand_drawing_line_to(context, left + length, top + height, left);
         context.strokeStyle = "#000";
         context.lineWidth = 2;
         context.stroke();

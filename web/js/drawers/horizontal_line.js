@@ -4,7 +4,7 @@ function HorizontalLineDrawer(context) {
         context.beginPath();
         context.moveTo(left, top);
 //        context.lineTo(left + length, top);
-        horizontal_cairo_curve_to(context, left, top, left + length);
+        horizontal_hand_drawing_line_to(context, left, top, left + length);
         context.lineWidth = 2;
         context.strokeStyle = $('#message').css("color");
         context.stroke();
