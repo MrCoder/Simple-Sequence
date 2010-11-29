@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b0121167-156e-49c8-b314-9887442a7ca6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/util/string.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/bar.js" afterPath="$PROJECT_DIR$/web/js/drawers/bar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" afterPath="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/sequence.css" afterPath="$PROJECT_DIR$/web/css/sequence.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/drawers/hand_drawing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" afterPath="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/rect.js" afterPath="$PROJECT_DIR$/web/js/drawers/rect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/line.js" afterPath="$PROJECT_DIR$/web/js/drawers/line.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/presentation/message_convertor.js" afterPath="$PROJECT_DIR$/web/js/presentation/message_convertor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/horizontal_line.js" afterPath="$PROJECT_DIR$/web/js/drawers/horizontal_line.js" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -72,10 +64,28 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="40" selection-start="633" selection-end="633" vertical-scroll-proportion="-8.84">
+            <state line="123" column="42" selection-start="5648" selection-end="5648" vertical-scroll-proportion="0.4742268">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appengine-web.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/appengine-web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="71" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sequence.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/sequence.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="183" column="0" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,10 +136,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bar.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bar.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/drawers/bar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="39" selection-start="482" selection-end="482" vertical-scroll-proportion="0.35619047">
+            <state line="11" column="39" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,24 +149,6 @@
         <entry file="file://$PROJECT_DIR$/web/js/drawers/hand_drawing.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="45" column="1" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="string.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/util/string.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="2" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message_convertor.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/presentation/message_convertor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="46" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -176,7 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js" />
         <option value="$PROJECT_DIR$/web/js/domain/entities.js" />
         <option value="$PROJECT_DIR$/web/js/parser/message_parser.js" />
         <option value="$PROJECT_DIR$/web/js/excanvas.js" />
@@ -186,12 +177,13 @@
         <option value="$PROJECT_DIR$/web/js/presentation/presentation_message.js" />
         <option value="$PROJECT_DIR$/web/js/util/string.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/hand_drawing.js" />
-        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/js/drawers/rect.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/horizontal_line.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/line.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/bar.js" />
+        <option value="$PROJECT_DIR$/web/css/sequence.css" />
+        <option value="$PROJECT_DIR$/web/index.html" />
       </list>
     </option>
   </component>
@@ -405,6 +397,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="drawers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seqDia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seqDia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -727,7 +737,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1705036" sideWeight="0.7612732" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19928057" sideWeight="0.7612732" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25331566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -814,18 +824,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/appengine-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="71" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/domain/activity_sequence.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="30" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
@@ -875,13 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="40" selection-start="633" selection-end="633" vertical-scroll-proportion="-8.84">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/drawers/rect.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="20" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
@@ -919,7 +910,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/drawers/bar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="39" selection-start="482" selection-end="482" vertical-scroll-proportion="0.35619047">
+        <state line="11" column="39" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/sequence.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="183" column="0" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/appengine-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="71" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="42" selection-start="5648" selection-end="5648" vertical-scroll-proportion="0.4742268">
           <folding />
         </state>
       </provider>

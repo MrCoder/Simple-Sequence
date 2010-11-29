@@ -38,7 +38,6 @@
 
     <script type="text/javascript">
 
-
         jQuery(window).load(function() {
             if (jQuery.browser.safari && document.readyState != 'complete') {
                 // chrome / safari will trigger load function before images are finished
@@ -63,7 +62,6 @@
         }
 
 
-
         window.redraw = function () {
             var scriptContent = $("#script_content")[0].value;
             window.activitySequence.draw(window.canvasManager, scriptContent);
@@ -71,7 +69,7 @@
             window.lastYOffset = 0;
         };
 
-        function repositCanvas() {
+        function resetCanvasPosition() {
             $('#canvasContainer').offset({ top: 0, left: 0 });
             window.lastXOffset = 0;
             window.lastYOffset = 0;
@@ -93,15 +91,12 @@
             if (totalOffsetY < 10 && totalOffsetX < 10) {
                 $('#canvasContainer').offset({ left: totalOffsetX, top: totalOffsetY });
             }
-//            if (totalOffsetX < 10) {
-//                $('#canvasContainer').offset({ left: totalOffsetX });
-//            }
         }
 
         function endMove(event) {
             $('#canvasContainer')[0].onmousemove = null;
             if (event == null) event = window.event;
-            
+
             window.lastXOffset = window.lastXOffset + event.screenX - window.orignalX;
             window.lastYOffset = window.lastYOffset + event.screenY - window.orignalY;
             if (window.lastXOffset > 0) {
@@ -122,11 +117,19 @@
 
 </head>
 <body>
+<div id="header">
+    <h1 style="padding: 0.8em;">Simple Sequence</h1>
+    <p class="menu">
+        <a href="/">Home</a>&nbsp;.&nbsp;
+        <a href="https://twitter.com/eaglexiao">Twitter</a>&nbsp;.&nbsp;
+        <a href="http://designpatterns.cnblogs.com">Blog</a>&nbsp;.&nbsp;
+    </p>
+</div>
 <div id="content_container" class="scroll" style="position: relative;">
     <div id="canvasContainer" style="position: relative;"
          onmousedown="startMove(event); return true;"
          onmouseup="endMove(event); return false;"
-         ondblclick="repositCanvas(); return true;">
+         ondblclick="resetCanvasPosition(); return true;">
         <canvas id="grid" width=2048 height=2048 class="canvas" style="z-index:1000"></canvas>
         <canvas id="entity_canvas_" width=2048 height=2048 class="canvas" style="z-index:1000"></canvas>
         <canvas id="message_canvas_" width=2048 height=2048 class="canvas" style="z-index:5000"></canvas>
@@ -167,7 +170,6 @@
                         localStorage.script = p.value;
                     }, false);
                 }
-
 
             }
 

@@ -1,3 +1,4 @@
+
 .entity_box {
     color: #7f8386;
 }
@@ -13,6 +14,319 @@
 .bar {
     border-color: #0033cc;
     background-color: #ffffff;
+}
+
+html{
+	background-color: #5195CE;
+}
+body{
+	font-family: arial;
+	margin: 0px;
+	background-color: white;
+}
+
+h1,h2,h3{
+	font-family: Arial;
+}
+h1{
+	font-size: 2em;
+	margin-bottom: 0.6em;
+}
+
+a{
+	color: #5195CE;
+}
+
+.title-text
+{
+	font-size: 3.5em;
+	margin-top: 0px;
+	padding-top: 1em;
+
+}
+.big-text{
+	font-size: 2em;
+}
+
+.med-text{
+	font-size: 1.6em;
+}
+
+.button-link{
+	padding: 0.6em;
+	background-color: #5BC236;
+	border: 4px solid #4A9C2C;
+	font-family: helvetica;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+}
+
+a.cute-button-link:hover, a.button-link:hover{
+	/*background-color: #4A9C2C;
+	border-color: #5BC236;*/
+	color: #EEE;
+}
+
+.draw-options
+{
+	color: #5195CE;
+	padding: .2em 0em .2em 0em;
+
+	font-weight: bold;
+	text-decoration: none;
+	/*background-color: #DDD;*/
+	/*padding: .3em;*/
+}
+
+.draw-options:hover
+{
+
+	color: white;
+	background-color: #5195CE;
+	text-decoration: none;
+	cursor: default;
+	/*border: 3px solid #4A9C2C;*/
+	/*color: white;*/
+	/*padding: 2px;*/
+
+
+}
+
+/*.draw-options:hover:after
+{
+	content: '?';
+}*/
+
+.rss-popup {
+
+    padding: 0;
+    position: relative;
+	display: inline;
+	background: white;
+
+}
+
+div.rss-popup div {
+    /*background: url(bubble.png) no-repeat;*/
+    position: absolute;
+    top: 0px;
+    left: -1em;
+    /*text-indent: -9999px;*/
+    z-index: 2000;
+    display: none;
+	text-align: left;
+
+}
+
+.rss-popup-div{
+	background: white;
+	border: 4px solid #5195CE;
+
+	padding: 2em;
+	color: black;
+	font-size: 15px;
+	-moz-border-radius: 1.5em;
+	-webkit-border-radius: 1.5em;
+	-webkit-box-shadow: .5em .5em .5em #DDD;
+}
+
+.rss-popup-close{
+	font-family: Comic Sans MS;
+	color: #5195CE; /*#5195CE;*/
+	font-size: 2em;
+	font-weight: bold;
+	display: inline-table;
+	position: absolute;
+	left: -.0em;
+	top: -.1em;
+	padding: .2em;
+
+	/*border: 4px solid #5195CE;*/
+	cursor: pointer;
+}
+.cute-button-link{
+	padding: 0.4em;
+	background-color: #5BC236;
+	border: 2px solid #4A9C2C;
+	font-family: helvetica;
+	font-weight: normal;
+	color: white;
+	text-decoration: none;
+}
+
+.blue
+{
+	background-color: #5195CE;
+	border: 4px solid #02243C;
+}
+
+.button-link:hover{
+	color: #F9F9F9;
+}
+
+.chord-box
+{
+	display: inline;
+	font-size: 1.3em;
+	padding: 4px;
+	background: #EEE;
+	border: 1px solid #DDD;
+}
+#cord-box
+{
+	font-family: times;
+}
+#header
+{
+	width:100%;
+	font-size: .8em;
+	background-color: #000000;
+	padding: 0.5em 0 0.5em 0;
+	color: white;
+	font-family: Arial;
+
+}
+
+#header h1, #header h1 a
+{
+	margin-top: 0px;
+	margin-bottom: 0em;
+	padding-bottom: 0em;
+	padding-top: 0em;
+
+	color: white;
+	text-decoration: none;
+}
+#header a
+{
+	color: white;
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: normal;
+}
+#header p
+{
+	padding-bottom: 0.0em;
+}
+
+#header .menu a{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 1.2em;
+	color: #516676;
+}
+#header .menu a:hover{
+	color: #FFF;
+}
+
+#header .menu {
+
+	color: #203a4f;
+	font-weight: bold;
+
+}
+
+#content
+{
+	padding-top: 2em;
+	padding-bottom: 2em;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+#footer
+{
+
+	padding-top: 1em;
+	width: 100%;
+	background: #5195CE;
+	color: white;
+	min-height: 8em;
+
+}
+
+#footer a
+{
+	color: white;
+}
+
+
+
+.tweets
+{
+
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	height: 6em;
+}
+
+.tweets ul, .tweets li
+{
+	width: 100%;
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	margin: 0;
+}
+
+.tweets .tweet
+{
+	padding: 0;
+		margin: 0;
+ 	font-size: 1.2em;
+
+	top: -1em;
+}
+
+.tweets .author
+{
+	position: relative;
+	padding: 0;
+	margin: 0;
+ 	font-size: .9em;
+
+
+}
+
+
+.tweets .quote
+{
+	position: relative;
+	font-size: 2em;
+	font-weight: bold;
+	color: silver;
+}
+
+.tweets b
+{
+	font-weight: normal;
+}
+
+.tweets a
+{
+	color: black;
+}
+
+table.pricetable th{
+	border: none;
+	border-bottom: 4px solid #DDD;
+}
+table.pricetable td
+{
+
+	border: none;
+}
+table.pricetable tr > td{
+	text-align: right;
+}
+table.pricetable td + td{
+  	color: #4A9C2C;
+	font-weight: bold;
+	text-align: left;
+	font-size: 1.2em;
 }
 
 .scroll {
