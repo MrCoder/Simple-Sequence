@@ -70,7 +70,7 @@
         };
 
         function resetCanvasPosition() {
-            $('#canvasContainer').offset({ top: 0, left: 0 });
+            $('#canvasContainer').offset({ top: $('#content_container').offset().top, left: 0 });
             window.lastXOffset = 0;
             window.lastYOffset = 0;
         }
@@ -88,8 +88,8 @@
             //            $('#debug').text(totalOffsetY);
             var offsetX = event.screenX - window.orignalX;
             var totalOffsetX = window.lastXOffset + offsetX;
-            if (totalOffsetY < 10 && totalOffsetX < 10) {
-                $('#canvasContainer').offset({ left: totalOffsetX, top: totalOffsetY });
+            if (totalOffsetY < 5 && totalOffsetX < 5) {
+                $('#canvasContainer').offset({ left: totalOffsetX, top: totalOffsetY + $('#content_container').offset().top });
             }
         }
 
@@ -118,7 +118,8 @@
 </head>
 <body>
 <div id="header">
-    <h1 style="padding: 0.8em;">Simple Sequence</h1>
+    <h1 style="padding-top: 0.8em; padding-left:0.8em">Simple Sequence</h1>
+    <h2 id="subTitle" style="padding-bottom:0.8em; padding-left:0.8em">The best ever free online sequence diagram drawer</h2>
     <p class="menu">
         <a href="/">Home</a>&nbsp;.&nbsp;
         <a href="https://twitter.com/eaglexiao">Twitter</a>&nbsp;.&nbsp;

@@ -5,13 +5,7 @@ function MessageParser() {
     this.currentMessage = null;
     this.messageStack = new Array();
 
-    String.prototype.startsWith = function(pattern) {
-        return (this.substr(0, pattern.length) == pattern);
-    };
 
-    String.prototype.endsWith = function(pattern) {
-        return (this.substr(this.length - pattern.length, pattern.length) == pattern);
-    };
 
     this.parse = function (scriptContent) {
         scriptContent = scriptContent.split("{").join("\n{\n");
@@ -26,6 +20,8 @@ function MessageParser() {
             } else if (expression.trim() == "}") {
                 this.messageStack.pop();
             } else if (expression.trim().startsWith("//")) {
+                // do nothing
+            }else if (expression.trim().startsWith(":")) {
                 // do nothing
             } else {
                 var message = getMessageFromSentence(this.messageIdGenerator ++, expression);
@@ -46,7 +42,9 @@ function MessageParser() {
 
 
     function getMessageFromSentence(id, sentence) {
-        if (sentence.trim() == "") return null;
+
+        sentence = sentence.trim();
+        if (sentence == "") return null;
 
         sentence = sentence.split(" ").join("");
         /((\w+):)*((\w+)=)*((\w+)\.)*(.+)/.test(sentence);

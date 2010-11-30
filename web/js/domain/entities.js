@@ -22,7 +22,9 @@ function getEntities(scriptContent) {
 }
 
 function getEntitiesFromSentence(sentence) {
-    if (sentence.trim() == "") return null;
+    sentence = sentence.trim();
+    if (sentence == "") return null;
+    if (sentence.startsWith(":")) return ["CLIENT", sentence.substr(1, sentence.length - 1)];
 
     sentence = sentence.split(" ").join("");
     /((\w+):)*((\w+)=)*((\w+)\.)*(\w+)/.test(sentence);
