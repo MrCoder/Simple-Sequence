@@ -113,17 +113,37 @@
             }
         }
 
+        function insertSampleCode(){
+            var sampleCode ="// The following line defined an Entity (optional)\n:A\nA.methodA(){\n  // The method invoked from inside methodA comes here\n  internalInvokeOfA()\n  B.methodB();\n}";
+            $("#script_content")[0].value = sampleCode;
+            window.redraw();
+        }
+
     </script>
 
 </head>
 <body>
 <div id="header">
+    <div style="position: absolute; top: 10px; right: 10px;">
+        Tips:
+        <ul>
+            <li>All script saved as you are typing. Fell free to close and reopen you browser at anytime.</li>
+            <li>If you want an Entity shown before others defined it on the top with <code>:EntityName</code>.</li>
+            <li>Keyword <code>new</code> still to be supported, you may use <code>EntityName.new</code> now.</li>
+            <li><code>Loop/iteration/if-else</code> still to be supported find a way for your representation.</li>
+            <li>It is designed to support IE 8 or later, but if it doesn't work, try a better browser, such as Firefox/Safari/Chrome.</li>
+        </ul>
+    </div>
     <h1 style="padding-top: 0.8em; padding-left:0.8em">Simple Sequence</h1>
-    <h2 id="subTitle" style="padding-bottom:0.8em; padding-left:0.8em">The best ever free online sequence diagram drawer</h2>
+
+    <h2 id="subTitle" style="padding-bottom:0.8em; padding-left:0.8em">The best ever free online sequence diagram
+        drawer</h2>
+
     <p class="menu">
         <a href="/">Home</a>&nbsp;.&nbsp;
         <a href="https://twitter.com/eaglexiao">Twitter</a>&nbsp;.&nbsp;
         <a href="http://designpatterns.cnblogs.com">Blog</a>&nbsp;.&nbsp;
+        <a style="color:white" href="http://www.cnblogs.com/DesignPatterns/archive/2010/11/30/simple-sequence.html">Help</a>&nbsp;.&nbsp;
     </p>
 </div>
 <div id="content_container" class="scroll" style="position: relative;">
@@ -141,19 +161,20 @@
 
 
 <div id="floating_container" class="expand">
-    <div id="script_title" onclick="collapse()">
-        <span id="debug">Pseudo Code:</span></div>
+    <div id="script_title" >
+        <span id="debug" onclick="collapse()">Pseudo Code:</span>
+    <button id="sample_code" onclick="insertSampleCode()">Insert Sample Code</button>
+    </div>
     <div style="float: right;">
-            <span id="collapse_button" onclick="collapse()">
-            </span>
+         <span id="collapse_button" onclick="collapse()">             </span>
     </div>
     <div id="script_container">
         <textarea id="script_content"
                   title="Script Content"
                   onblur="window.redraw()" onkeyup="window.redraw()"></textarea>
         <script type="text/javascript">
-            //            var supported = 'document.ready{\ncanvasManager.new()\n}';
-            var supported = '// This is a comment. \ndocument.ready{\n  canvasManager.new(){\n    a = invokeMethod();\n    a.invokeMethod();\n  }\n}';
+            var supported ="// The following line defined an Entity (optional)\n:A\nA.methodA(){\n  // The method invoked from inside methodA comes here\n  internalInvokeOfA()\n  B.methodB();\n}";
+//            var supported = '// This is a comment. \ndocument.ready{\n  canvasManager.new(){\n    a = invokeMethod();\n    a.invokeMethod();\n  }\n}';
             var p = $("#script_content")[0];
             if (localStorage != null) {
                 if (localStorage.script == null) {

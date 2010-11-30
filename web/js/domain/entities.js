@@ -25,6 +25,7 @@ function getEntitiesFromSentence(sentence) {
     sentence = sentence.trim();
     if (sentence == "") return null;
     if (sentence.startsWith(":")) return ["CLIENT", sentence.substr(1, sentence.length - 1)];
+    if (sentence.startsWith("//")) return ["CLIENT", "CLIENT"];
 
     sentence = sentence.split(" ").join("");
     /((\w+):)*((\w+)=)*((\w+)\.)*(\w+)/.test(sentence);

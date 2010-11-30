@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b0121167-156e-49c8-b314-9887442a7ca6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/sequence.css" afterPath="$PROJECT_DIR$/web/css/sequence.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/domain/entities.js" afterPath="$PROJECT_DIR$/web/js/domain/entities.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/arrow_icon_left.js" afterPath="$PROJECT_DIR$/web/js/drawers/arrow_icon_left.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js" afterPath="$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -65,10 +66,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="84" selection-start="4715" selection-end="4715" vertical-scroll-proportion="55.56">
+            <state line="116" column="142" selection-start="5693" selection-end="5693" vertical-scroll-proportion="0.5368421">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xhtml1-transitional.dtd" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xhtml1-transitional.dtd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="728" column="10" selection-start="18980" selection-end="18980" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -83,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arrow_icon_right.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="arrow_icon_right.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="100" selection-start="213" selection-end="213" vertical-scroll-proportion="0.09855072">
+            <state line="4" column="100" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,7 +105,7 @@
       <file leaf-file-name="sequence.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/sequence.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="3" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
+            <state line="382" column="19" selection-start="4830" selection-end="4830" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,7 +123,7 @@
       <file leaf-file-name="entities.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/domain/entities.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="16" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0">
+            <state line="27" column="60" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,15 +156,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hand_drawing.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/drawers/hand_drawing.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="1" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -177,14 +178,14 @@
         <option value="$PROJECT_DIR$/web/js/drawers/internal_invoke.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/line.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/bar.js" />
-        <option value="$PROJECT_DIR$/web/css/sequence.css" />
         <option value="$PROJECT_DIR$/web/js/util/string.js" />
-        <option value="$PROJECT_DIR$/web/js/domain/entities.js" />
         <option value="$PROJECT_DIR$/web/js/parser/message_parser.js" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" />
-        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/js/drawers/arrow_icon_left.js" />
         <option value="$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js" />
+        <option value="$PROJECT_DIR$/web/js/domain/entities.js" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" />
+        <option value="$PROJECT_DIR$/web/css/sequence.css" />
+        <option value="$PROJECT_DIR$/web/index.html" />
       </list>
     </option>
   </component>
@@ -422,18 +423,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="118" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="122" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="173" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="169" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="129" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="129" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="138" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="922" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="142" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="918" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="925" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="134" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="166" />
@@ -452,8 +453,8 @@
     <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -558,15 +559,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="FtpUpload" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="ValidateXdebugSetup" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
@@ -576,6 +568,15 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="FtpUpload" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="ValidateXdebugSetup" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -709,14 +710,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39920425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32802126" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19928057" sideWeight="0.6618037" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19928057" sideWeight="0.6618037" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25331566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -803,11 +804,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/rect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="20" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/drawers/horizontal_line.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="19" selection-start="265" selection-end="282" vertical-scroll-proportion="0.0">
@@ -850,6 +846,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xhtml1-transitional.dtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="728" column="10" selection-start="18980" selection-end="18980" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/arrow_icon_left.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="98" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="100" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/sequence.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="382" column="19" selection-start="4830" selection-end="4830" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/util/string.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="2" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
@@ -859,7 +883,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/domain/entities.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="16" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0">
+        <state line="27" column="60" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -885,30 +909,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/sequence.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="3" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="84" selection-start="4715" selection-end="4715" vertical-scroll-proportion="55.56">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/arrow_icon_left.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="98" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/drawers/arrow_icon_right.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="100" selection-start="213" selection-end="213" vertical-scroll-proportion="0.09855072">
+        <state line="116" column="142" selection-start="5693" selection-end="5693" vertical-scroll-proportion="0.5368421">
           <folding />
         </state>
       </provider>
